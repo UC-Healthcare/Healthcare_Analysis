@@ -1,1 +1,13 @@
 # Healthcare_Analysis
+- Selected topic
+  - Healthcare: impact of health choices and/or diseases on mental health. 
+- Reason why we selected our topic
+  - Interested in seeing if there is a correlation between health choices and mental health outcome for patients.
+- Description of their source of data
+  - Kaggle dataset: https://www.kaggle.com/datasets/cdc/behavioral-risk-factor-surveillance-system
+- Questions they hope to answer with the data?
+  - What health choices impact mental health?
+  - What diseases impact mental health?
+- Description of the communication protocols
+  - Database: AWS
+  - ?
