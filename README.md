@@ -3,9 +3,9 @@
 =======
 - Week 1 roles:
   - Square (GitHub): Aaron
-  - Triangle (ML Model): 
-  - Circle (Database): 
-  - X (Technologies): 
+  - Triangle (ML Model): Kylie
+  - Circle (Database): Adriana
+  - X (Technologies): Lukas
 - Selected topic
   - Healthcare: impact of health choices and/or diseases on mental health. 
 - Presentation (Google Slides)
