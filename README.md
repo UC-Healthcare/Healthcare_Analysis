@@ -1,10 +1,12 @@
 # Healthcare_Analysis
 - Week 2 roles:
-  - Square (Machine Learning): 
-  - Triangle (Database): 
-  - Circle (Analysis): 
-  - X (Dashboard): 
+  - Square (Machine Learning): Kylie
+  - Triangle (Database): Adriana
+  - Circle (Analysis): Aaron
+  - X (Dashboard): Lukas
+  
 =======
+
 - Week 1 roles:
   - Square (GitHub): Aaron
   - Triangle (ML Model): Kylie
