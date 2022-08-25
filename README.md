@@ -1,5 +1,9 @@
 # Healthcare_Analysis
-
+- Week 2 roles:
+  - Square (Machine Learning): 
+  - Triangle (Database): 
+  - Circle (Analysis): 
+  - X (Dashboard): 
 =======
 - Week 1 roles:
   - Square (GitHub): Aaron
