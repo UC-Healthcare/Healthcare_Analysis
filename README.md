@@ -16,4 +16,5 @@
   - What health choices impact mental health?
   - What diseases impact mental health?
 - Description of the communication protocols
-  - Database: AWS
+  - Messaging: Slack group
+  - Video conferencing: Zoom
