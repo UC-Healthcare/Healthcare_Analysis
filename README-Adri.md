@@ -1,13 +1,15 @@
 # Healthcare_Analysis
 ## Deliverable 1 
-# On Branch 
-# mockup folder contains sample dataset , which has been uploaded to PgAdmin and linked to ML model 
-#DB_Healthcare contains work for real data set, will be retrieving data from S3, Using Pyspark to transfer and  load it to table on RDS instance in PGAdmin. Then planning to create some joins and additional tables for vizualization/dashboard and link database to machine learning model 
+###On Branch 
+
+Mockup folder contains sample dataset , which has been uploaded to PgAdmin and linked to ML model 
+
+DB_Healthcare contains work for real data set, will be retrieving data from S3, Using Pyspark to transfer and  load it to table on RDS instance in PGAdmin. Then planning to create some joins and additional tables for vizualization/dashboard and link database to machine learning model 
 
 
 
 
-## Topic
+### Topic
 
 Health Behavioral Risk 
 
