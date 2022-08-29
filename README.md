@@ -1,4 +1,6 @@
 # Healthcare_Analysis
+
+## Segment 1
 - Week 1 roles:
   - Square (GitHub): Aaron
   - Triangle (ML Model): Kylie
@@ -18,3 +20,21 @@
 - Description of the communication protocols
   - Messaging: Slack group
   - Video conferencing: Zoom
+
+## Segment 2
+- Week 2 roles:
+  - Square (ML Model): Kylie
+  - Triangle (Database): Adriana
+  - Circle (Analysis): Aaron
+  - X (Dashboard): Lukas
+- Description of the data exploration phase of the project
+  - 
+- Description of the analysis phase of the project
+  - 
+- Outline of the project (this may include images, but should be easy to follow and digest)
+  - 
+- Machine Learning Model
+  - Description of preliminary data preprocessing
+  - Description of preliminary feature engineering and preliminary feature selection, including their decision-making process
+  - Description of how data was split into training and testing sets
+  - Explanation of model choice, including limitations and benefits
