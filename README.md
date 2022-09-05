@@ -33,6 +33,8 @@
   - X (Dashboard): Lukas
 - Description of the data exploration phase of the project:
 - Description of the analysis phase of the project:
+  - Analysis was performed using Seaborn to create detailed and informative graphics using cleaned data from AWS RDS connection using Psycopg2 dependency.
+  - Cleaned out certain values indicating no response to questions that were skewing data points.
 - Outline of the project (this may include images, but should be easy to follow and digest):
 - Machine Learning Model
   - Preliminary data preprocessing: The data was first preprocessed in SQL, where unnecessary features were manually removed (focusing on redundant  features), null values were removed, and the columns were renamed for clarity. Then once the data was loaded into a pandas dataframe, the shape, data types, and null value count was double checked before feature engineering.
