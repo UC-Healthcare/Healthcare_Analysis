@@ -1,16 +1,14 @@
 # Healthcare_Analysis
 
- Aaron
-
 ## Segment 1
- main
+
 - Week 1 roles:
   - Square (GitHub): Aaron
   - Triangle (ML Model): Kylie
   - Circle (Database): Adriana
   - X (Technologies): Lukas
 - Selected topic
- Aaron
+ 
   - Healthcare: impact of health choices and/or diseases on mental health. 
 - Presentation (Google Slides)
   - https://docs.google.com/presentation/d/1VOKThQU5-b4-bnefdcjQFqS2OTrTk7YJTZ_tH2pm3Ic/edit?usp=sharing
