@@ -1,12 +1,30 @@
 # Healthcare_Analysis
 
+ Aaron
+
 ## Segment 1
+ main
 - Week 1 roles:
   - Square (GitHub): Aaron
   - Triangle (ML Model): Kylie
   - Circle (Database): Adriana
   - X (Technologies): Lukas
 - Selected topic
+ Aaron
+  - Healthcare: impact of health choices and/or diseases on mental health. 
+- Presentation (Google Slides)
+  - https://docs.google.com/presentation/d/1VOKThQU5-b4-bnefdcjQFqS2OTrTk7YJTZ_tH2pm3Ic/edit?usp=sharing
+- Reason why we selected our topic
+  - Interested in seeing if there is a correlation between health choices and mental health outcome for patients.
+- Description of their source of data
+  - Kaggle dataset: https://www.kaggle.com/datasets/cdc/behavioral-risk-factor-surveillance-system
+- Questions they hope to answer with the data?
+  - What health choices impact mental health?
+  - What diseases impact mental health?
+- Description of the communication protocols
+  - Messaging: Slack group
+  - Video conferencing: Zoom
+
   - Healthcare: Correlation between physical and mental health. 
 - Presentation (Google Slides)
   - https://docs.google.com/presentation/d/1VOKThQU5-b4-bnefdcjQFqS2OTrTk7YJTZ_tH2pm3Ic/edit?usp=sharing
@@ -43,3 +61,4 @@
   - Preliminary feature selection: A random forest classifier was fit on the data with all features, and a feature importance plot was used to rank features by importance. I chose a cutoff of 0.015 variable importance because there was a jump down in values after that point. The result was 27 features kept for modeling (out of 41 originally).
   - How data was split into training and testing sets: The data was split into training and testing sets using PyCaret’s “.sample()” function, with 5% or 11,108 rows being kept aside for testing.
   - Explanation of model choice, including limitations and benefits: To choose the optimal model, I utilized an open-source machine learning library called “PyCaret”. PyCaret includes a function called compare_models() which runs 12 different binary classification models on the data and outputs a table with the accuracy, recall, precision, and more for each model. Based on the results of the analysis, I chose the gradient boosting classifier model because it is an option that is highly accurate yet still interpretable. Additionally, I know that gradient boosted models use ensemble learning to combine weak learners into a more powerful model. However, some limitations of gradient boosting classifiers are that they have potential for overfitting and take a long time to run.
+ main
