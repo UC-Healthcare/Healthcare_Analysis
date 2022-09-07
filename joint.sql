@@ -8,8 +8,12 @@ CREATE TABLE statestable (
 	PRIMARY KEY (id_)
 );
 
-SELECT *
-INTO Dash_Data_Joint
-FROM dash_data_cleaned as dd
-LEFT JOIN states as st
-ON dd.STATE = st.id_;
+SELECT st.state_, st.latitude, st.longitude, dd.*
+INTO dash_data_final
+FROM states as st
+LEFT JOIN survey_dash_data as dd
+ON st.id_ = dd.state ;
+
+
+SELECT * FROM dash_data_final as dd
+WHERE dd.id = 1
