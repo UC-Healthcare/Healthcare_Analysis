@@ -9,6 +9,15 @@ DB_Healthcare contains work for real data set, will be retrieving data from S3, 
 
 ## Deliverable 2
 ###On Branch 
+Data Exploration: 
+
+-Data we used was Health Care Survey for 2015 from CDC which is the principal source of information on the health of the civilian noninstitutionalized population of the United States and is one of the major data collection programs of the National Center for Health Statistics
+
+- We researched the codebook to understand columns and make the selection.
+- We loaded the data in S3 bucket and import it using pyspark 
+- Transformed data using pyspark. Selected relevant columns, removing NA, replacing values and updating column names and replacing values where needed.   Created a  table for ML and another one  for dashboard purposes
+- Loaded data to Postgres , performed joint with state table and then connected Database  to perform ML and Dashboard. 
+
 
 Updated ERD
 3 tables :
@@ -17,6 +26,7 @@ Updated ERD
 -States
 
 Database is connected to pandas. 
+
 
 
 
