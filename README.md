@@ -1,16 +1,14 @@
 # Healthcare_Analysis
 
- Aaron
-
 ## Segment 1
- main
+
 - Week 1 roles:
   - Square (GitHub): Aaron
   - Triangle (ML Model): Kylie
   - Circle (Database): Adriana
   - X (Technologies): Lukas
 - Selected topic
- Aaron
+ 
   - Healthcare: impact of health choices and/or diseases on mental health. 
 - Presentation (Google Slides)
   - https://docs.google.com/presentation/d/1VOKThQU5-b4-bnefdcjQFqS2OTrTk7YJTZ_tH2pm3Ic/edit?usp=sharing
@@ -50,6 +48,11 @@
   - Circle (Analysis): Aaron
   - X (Dashboard): Lukas
 - Description of the data exploration phase of the project:
+  - Data we used was Health Care Survey for 2015 from CDC which is the principal source of information on the health of the civilian noninstitutionalized population of the United States and is one of the major data collection programs of the National Center for Health Statistics
+  - We researched the codebook to understand columns and make the selection.
+  - We loaded the data in S3 bucket and import it using pyspark
+  - Transformed data using pyspark. Selected relevant columns, removing NA, replacing values and updating column names and replacing values where needed.   Created a  table for ML and another one  for dashboard purposes
+  - Loaded data to Postgres , performed joint with state table and then connected Database  to perform ML and Dashboard.
 - Description of the analysis phase of the project:
   - Analysis was performed using Seaborn to create detailed and informative graphics using cleaned data from AWS RDS connection using Psycopg2 dependency.
   - Cleaned out certain values indicating no response to questions that were skewing data points.
