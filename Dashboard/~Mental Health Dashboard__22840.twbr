@@ -1,0 +1,3169 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20222.22.0812.0353                               -->
+<workbook original-version='18.1' source-build='2022.2.1 (20222.22.0812.0353)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='dashboard_16627669639940' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='mltable (postgres)' inline='true' name='federated.06hjz7105oz3ez19a69y313xh3ah' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='bootcampproject.cs8v5ggqsbn0.us-west-1.rds.amazonaws.com' name='postgres.0shdko001zudni1a8fump1tk2gx7'>
+            <connection authentication='username-password' class='postgres' dbname='postgres' odbc-native-protocol='' one-time-sql='' port='5432' server='bootcampproject.cs8v5ggqsbn0.us-west-1.rds.amazonaws.com' username='postgres' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='postgres.0shdko001zudni1a8fump1tk2gx7' name='cleaned_dashboard_data' table='[public].[cleaned_dashboard_data]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='postgres.0shdko001zudni1a8fump1tk2gx7' name='cleaned_dashboard_data' table='[public].[cleaned_dashboard_data]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>STATE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[STATE]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>STATE</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GENHLTH</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[GENHLTH]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>GENHLTH</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MENTHLTH</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[MENTHLTH]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>MENTHLTH</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SEX</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SEX]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>SEX</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PHYSHLTH</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PHYSHLTH]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>PHYSHLTH</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MARITAL_STATUS</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[MARITAL_STATUS]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>MARITAL_STATUS</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RACE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[RACE]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>RACE</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>METRO_CODE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[METRO_CODE]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>METRO_CODE</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AGE_14LEVEL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[AGE_14LEVEL]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>AGE_14LEVEL</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AGE_2LEVEL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[AGE_2LEVEL]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>AGE_2LEVEL</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EDUCATION_LEVEL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[EDUCATION_LEVEL]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>EDUCATION_LEVEL</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HOME_STATUS</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[HOME_STATUS]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>HOME_STATUS</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EMPLOYMENT_SITUATION</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[EMPLOYMENT_SITUATION]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>EMPLOYMENT_SITUATION</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>INCOME2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[INCOME2]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>INCOME2</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HEALTHY_ADULTS</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[HEALTHY_ADULTS]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>HEALTHY_ADULTS</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BMI_5CAT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[BMI_5CAT]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>BMI_5CAT</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PHYS_ACT_INDX</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PHYS_ACT_INDX]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>PHYS_ACT_INDX</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DRINKS_WEEK</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[DRINKS_WEEK]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>DRINKS_WEEK</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HAS_ARTHRITIS</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[HAS_ARTHRITIS]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>HAS_ARTHRITIS</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ASTHMA_DISEASE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ASTHMA_DISEASE]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>ASTHMA_DISEASE</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CORONARY_DISEASE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CORONARY_DISEASE]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>CORONARY_DISEASE</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HIGH_CHOLESTEROL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[HIGH_CHOLESTEROL]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>HIGH_CHOLESTEROL</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BLOOD_PRESSURE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[BLOOD_PRESSURE]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>BLOOD_PRESSURE</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HEALTH_CVRAGE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[HEALTH_CVRAGE]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>HEALTH_CVRAGE</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>INTERNET</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[INTERNET]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>INTERNET</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>VETERAN</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[VETERAN]</local-name>
+            <parent-name>[cleaned_dashboard_data]</parent-name>
+            <remote-alias>VETERAN</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Age 14Level' datatype='string' name='[AGE_14LEVEL]' role='dimension' type='nominal' />
+      <column caption='Age 2Level' datatype='string' name='[AGE_2LEVEL]' role='dimension' type='nominal' />
+      <column caption='Asthma Disease' datatype='string' name='[ASTHMA_DISEASE]' role='dimension' type='nominal' />
+      <column caption='Blood Pressure' datatype='string' name='[BLOOD_PRESSURE]' role='dimension' type='nominal' />
+      <column caption='Bmi 5Cat' datatype='string' name='[BMI_5CAT]' role='dimension' type='nominal' />
+      <column caption='Coronary Disease' datatype='string' name='[CORONARY_DISEASE]' role='dimension' type='nominal' />
+      <column caption='Mental Health 30 Day' datatype='string' name='[Calculation_1607222124832878592]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [MENTHLTH] &lt;= 30 AND [MENTHLTH] &gt;=15 THEN &quot;Moderate/Severe&quot;&#13;&#10;&#13;&#10;ELSE &quot;MILD&quot;&#13;&#10;&#13;&#10;END' />
+      </column>
+      <column caption='Ment %' datatype='real' name='[Calculation_1607222124865331204]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Mental Health 30 Day (copy)_1607222124836827137]/COUNT([MENTHLTH])' />
+      </column>
+      <column caption='Drinks Week' datatype='real' name='[DRINKS_WEEK]' role='dimension' type='quantitative' />
+      <column caption='Education Level' datatype='string' name='[EDUCATION_LEVEL]' role='dimension' type='nominal' />
+      <column caption='Employment Situation' datatype='string' name='[EMPLOYMENT_SITUATION]' role='dimension' type='nominal' />
+      <column caption='Genhlth' datatype='string' name='[GENHLTH]' role='dimension' type='nominal' />
+      <column caption='Has Arthritis' datatype='string' name='[HAS_ARTHRITIS]' role='dimension' type='nominal' />
+      <column caption='Healthy Adults' datatype='string' name='[HEALTHY_ADULTS]' role='dimension' type='nominal' />
+      <column caption='Health Cvrage' datatype='string' name='[HEALTH_CVRAGE]' role='dimension' type='nominal' />
+      <column caption='High Cholesterol' datatype='string' name='[HIGH_CHOLESTEROL]' role='dimension' type='nominal' />
+      <column caption='Home Status' datatype='string' name='[HOME_STATUS]' role='dimension' type='nominal' />
+      <column caption='Income2' datatype='string' name='[INCOME2]' role='dimension' type='nominal' />
+      <column caption='Internet' datatype='string' name='[INTERNET]' role='dimension' type='nominal' />
+      <column caption='Marital Status' datatype='string' name='[MARITAL_STATUS]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;Member of an unmarried couple&quot;' value='Unmarried couple' />
+        </aliases>
+      </column>
+      <column caption='Menthlth' datatype='integer' name='[MENTHLTH]' role='measure' type='quantitative' />
+      <column caption='Metro Code' datatype='string' name='[METRO_CODE]' role='dimension' type='nominal' />
+      <column caption='Mental Health Moderate/Severe' datatype='integer' name='[Mental Health 30 Day (copy)_1607222124836827137]' role='measure' type='ordinal'>
+        <calculation class='tableau' formula='SUM(IF [MENTHLTH] &gt;=16 THEN 1 END)' />
+      </column>
+      <column caption='Physhlth' datatype='integer' name='[PHYSHLTH]' role='measure' type='quantitative' />
+      <column caption='Phys Act Indx' datatype='string' name='[PHYS_ACT_INDX]' role='dimension' type='nominal' />
+      <column caption='Race' datatype='string' name='[RACE]' role='dimension' type='nominal' />
+      <column datatype='string' name='[SEX]' role='dimension' type='nominal' />
+      <column caption='State' datatype='string' name='[STATE]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Veteran' datatype='string' name='[VETERAN]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='cleaned_dashboard_data' datatype='table' name='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' role='measure' type='quantitative' />
+      <column-instance column='[MENTHLTH]' derivation='Attribute' name='[attr:MENTHLTH:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[MENTHLTH]' derivation='Avg' name='[avg:MENTHLTH:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1607222124832878592]' derivation='Count' name='[cnt:Calculation_1607222124832878592:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[MENTHLTH]' derivation='Count' name='[cnt:MENTHLTH:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Mental Health 30 Day (copy)_1607222124836827137]' derivation='Count' name='[cnt:Mental Health 30 Day (copy)_1607222124836827137:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[DRINKS_WEEK]' derivation='CountD' name='[ctd:DRINKS_WEEK:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[MENTHLTH]' derivation='CountD' name='[ctd:MENTHLTH:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1607222124832878592]' derivation='Max' name='[max:Calculation_1607222124832878592:nk]' pivot='key' type='nominal' />
+      <column-instance column='[MENTHLTH]' derivation='Max' name='[max:MENTHLTH:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[MENTHLTH]' derivation='Median' name='[med:MENTHLTH:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1607222124832878592]' derivation='Min' name='[min:Calculation_1607222124832878592:nk]' pivot='key' type='nominal' />
+      <column-instance column='[AGE_14LEVEL]' derivation='None' name='[none:AGE_14LEVEL:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_1607222124832878592]' derivation='None' name='[none:Calculation_1607222124832878592:nk]' pivot='key' type='nominal' />
+      <column-instance column='[GENHLTH]' derivation='None' name='[none:GENHLTH:nk]' pivot='key' type='nominal' />
+      <column-instance column='[HOME_STATUS]' derivation='None' name='[none:HOME_STATUS:nk]' pivot='key' type='nominal' />
+      <column-instance column='[MENTHLTH]' derivation='None' name='[none:MENTHLTH:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Mental Health 30 Day (copy)_1607222124836827137]' derivation='None' name='[none:Mental Health 30 Day (copy)_1607222124836827137:nk]' pivot='key' type='ordinal' />
+      <column-instance column='[SEX]' derivation='None' name='[none:SEX:nk]' pivot='key' type='nominal' />
+      <column-instance column='[VETERAN]' derivation='None' name='[none:VETERAN:nk]' pivot='key' type='nominal' />
+      <column-instance aggregation-param='95' column='[MENTHLTH]' derivation='Percentile' name='[prc95:MENTHLTH:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[MENTHLTH]' derivation='Sum' name='[sum:MENTHLTH:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1607222124865331204]' derivation='User' name='[usr:Calculation_1607222124865331204:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Mental Health 30 Day (copy)_1607222124836827137]' derivation='User' name='[usr:Mental Health 30 Day (copy)_1607222124836827137:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[MENTHLTH]' derivation='Var' name='[var:MENTHLTH:qk]' pivot='key' type='quantitative' />
+      <group caption='Action (Age 14Level)' hidden='true' name='[Action (Age 14Level)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[AGE_14LEVEL]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Home Status)' hidden='true' name='[Action (Home Status)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[HOME_STATUS]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Income2)' hidden='true' name='[Action (Income2)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[INCOME2]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Race)' hidden='true' name='[Action (Race)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[RACE]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (SEX)' hidden='true' name='[Action (SEX)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[SEX]' />
+        </groupfilter>
+      </group>
+      <group hidden='true' name='[Exclusions (Menthlth,SEX)]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:MENTHLTH:qk]' />
+          <groupfilter function='level-members' level='[none:SEX:nk]' />
+        </groupfilter>
+      </group>
+      <group hidden='true' name='[Exclusions (Menthlth,Veteran)]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:MENTHLTH:qk]' />
+          <groupfilter function='level-members' level='[none:VETERAN:nk]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/mille/Documents/My Tableau Repository/Datasources/mltable_postgres_extract.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='09/07/2022 04:49:36 PM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='mltable (postgres)' increment-value='%null%' refresh-type='create' rows-inserted='136809' timestamp-start='2022-09-07 16:47:44.050' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>STATE</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[STATE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>STATE</remote-alias>
+              <ordinal>0</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>GENHLTH</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[GENHLTH]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>GENHLTH</remote-alias>
+              <ordinal>1</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MENTHLTH</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[MENTHLTH]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MENTHLTH</remote-alias>
+              <ordinal>2</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SEX</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[SEX]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SEX</remote-alias>
+              <ordinal>3</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PHYSHLTH</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[PHYSHLTH]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PHYSHLTH</remote-alias>
+              <ordinal>4</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>47</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MARITAL_STATUS</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[MARITAL_STATUS]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MARITAL_STATUS</remote-alias>
+              <ordinal>5</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>RACE</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[RACE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>RACE</remote-alias>
+              <ordinal>6</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>METRO_CODE</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[METRO_CODE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>METRO_CODE</remote-alias>
+              <ordinal>7</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>AGE_14LEVEL</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[AGE_14LEVEL]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>AGE_14LEVEL</remote-alias>
+              <ordinal>8</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>AGE_2LEVEL</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[AGE_2LEVEL]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>AGE_2LEVEL</remote-alias>
+              <ordinal>9</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>EDUCATION_LEVEL</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[EDUCATION_LEVEL]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>EDUCATION_LEVEL</remote-alias>
+              <ordinal>10</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>HOME_STATUS</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[HOME_STATUS]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>HOME_STATUS</remote-alias>
+              <ordinal>11</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>EMPLOYMENT_SITUATION</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[EMPLOYMENT_SITUATION]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>EMPLOYMENT_SITUATION</remote-alias>
+              <ordinal>12</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>INCOME2</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[INCOME2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>INCOME2</remote-alias>
+              <ordinal>13</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>HEALTHY_ADULTS</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[HEALTHY_ADULTS]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>HEALTHY_ADULTS</remote-alias>
+              <ordinal>14</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BMI_5CAT</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[BMI_5CAT]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BMI_5CAT</remote-alias>
+              <ordinal>15</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PHYS_ACT_INDX</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[PHYS_ACT_INDX]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PHYS_ACT_INDX</remote-alias>
+              <ordinal>16</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DRINKS_WEEK</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[DRINKS_WEEK]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DRINKS_WEEK</remote-alias>
+              <ordinal>17</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>179</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>HAS_ARTHRITIS</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[HAS_ARTHRITIS]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>HAS_ARTHRITIS</remote-alias>
+              <ordinal>18</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ASTHMA_DISEASE</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ASTHMA_DISEASE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ASTHMA_DISEASE</remote-alias>
+              <ordinal>19</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CORONARY_DISEASE</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CORONARY_DISEASE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CORONARY_DISEASE</remote-alias>
+              <ordinal>20</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>HIGH_CHOLESTEROL</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[HIGH_CHOLESTEROL]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>HIGH_CHOLESTEROL</remote-alias>
+              <ordinal>21</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BLOOD_PRESSURE</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[BLOOD_PRESSURE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BLOOD_PRESSURE</remote-alias>
+              <ordinal>22</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>HEALTH_CVRAGE</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[HEALTH_CVRAGE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>HEALTH_CVRAGE</remote-alias>
+              <ordinal>23</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>INTERNET</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[INTERNET]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>INTERNET</remote-alias>
+              <ordinal>24</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>VETERAN</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[VETERAN]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>VETERAN</remote-alias>
+              <ordinal>25</ordinal>
+              <family>cleaned_dashboard_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.06hjz7105oz3ez19a69y313xh3ah].[ctd:DRINKS_WEEK:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.06hjz7105oz3ez19a69y313xh3ah]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.06hjz7105oz3ez19a69y313xh3ah].[attr:MENTHLTH:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.06hjz7105oz3ez19a69y313xh3ah].[avg:MENTHLTH:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.06hjz7105oz3ez19a69y313xh3ah].[cnt:Calculation_1607222124832878592:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.06hjz7105oz3ez19a69y313xh3ah].[cnt:Mental Health 30 Day (copy)_1607222124836827137:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.06hjz7105oz3ez19a69y313xh3ah].[cnt:MENTHLTH:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.06hjz7105oz3ez19a69y313xh3ah].[ctd:MENTHLTH:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.06hjz7105oz3ez19a69y313xh3ah].[max:Calculation_1607222124832878592:nk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.06hjz7105oz3ez19a69y313xh3ah].[max:MENTHLTH:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.06hjz7105oz3ez19a69y313xh3ah].[med:MENTHLTH:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.06hjz7105oz3ez19a69y313xh3ah].[min:Calculation_1607222124832878592:nk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.06hjz7105oz3ez19a69y313xh3ah].[none:Calculation_1607222124832878592:nk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.06hjz7105oz3ez19a69y313xh3ah].[none:Mental Health 30 Day (copy)_1607222124836827137:nk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.06hjz7105oz3ez19a69y313xh3ah].[none:MENTHLTH:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.06hjz7105oz3ez19a69y313xh3ah].[prc95:MENTHLTH:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.06hjz7105oz3ez19a69y313xh3ah].[sum:MENTHLTH:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Calculation_1607222124865331204:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.06hjz7105oz3ez19a69y313xh3ah].[var:MENTHLTH:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:GENHLTH:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Excellent&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Very Good&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Poor&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Dont know&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Good&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Dont Know&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Fair&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_1607222124832878592:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>false</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Moderate/Severe&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;MILD&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>true</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:VETERAN:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;No&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Dont know&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Yes&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:HOME_STATUS:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Don’t Know&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Rent&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Own&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Other Arrangement&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;DOnt know&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Mental Health 30 Day (copy)_1607222124836827137:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>false</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>true</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:AGE_14LEVEL:nk]' palette='red_gold_10_0' type='palette'>
+            <map to='#79706e'>
+              <bucket>&quot;Dont know&quot;</bucket>
+            </map>
+            <map to='#b71d3e'>
+              <bucket>&quot;80-Older&quot;</bucket>
+            </map>
+            <map to='#c22f40'>
+              <bucket>&quot;75-79&quot;</bucket>
+            </map>
+            <map to='#cd3e43'>
+              <bucket>&quot;70-74&quot;</bucket>
+            </map>
+            <map to='#d74d46'>
+              <bucket>&quot;65-69&quot;</bucket>
+            </map>
+            <map to='#e15c48'>
+              <bucket>&quot;55-59&quot;</bucket>
+            </map>
+            <map to='#e96b49'>
+              <bucket>&quot;50-54&quot;</bucket>
+            </map>
+            <map to='#f17a4a'>
+              <bucket>&quot;45-49&quot;</bucket>
+            </map>
+            <map to='#f4d166'>
+              <bucket>&quot;18-24&quot;</bucket>
+            </map>
+            <map to='#f5bf5a'>
+              <bucket>&quot;25-29&quot;</bucket>
+            </map>
+            <map to='#f8894c'>
+              <bucket>&quot;40-44&quot;</bucket>
+            </map>
+            <map to='#f8ad52'>
+              <bucket>&quot;30-34&quot;</bucket>
+            </map>
+            <map to='#fb9b4e'>
+              <bucket>&quot;35-39&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[min:Calculation_1607222124832878592:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>false</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Moderate/Severe&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;MILD&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>true</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[usr:Mental Health 30 Day (copy)_1607222124836827137:ok]' palette='red_gold_10_0' type='palette'>
+            <map to='#b71d3e'>
+              <bucket>392</bucket>
+            </map>
+            <map to='#b71d3e'>
+              <bucket>1662</bucket>
+            </map>
+            <map to='#b71d3e'>
+              <bucket>2481</bucket>
+            </map>
+            <map to='#ba213e'>
+              <bucket>369</bucket>
+            </map>
+            <map to='#bd263f'>
+              <bucket>367</bucket>
+            </map>
+            <map to='#c02b40'>
+              <bucket>316</bucket>
+            </map>
+            <map to='#c33040'>
+              <bucket>269</bucket>
+            </map>
+            <map to='#c63441'>
+              <bucket>262</bucket>
+            </map>
+            <map to='#c83842'>
+              <bucket>239</bucket>
+            </map>
+            <map to='#cb3c43'>
+              <bucket>224</bucket>
+            </map>
+            <map to='#cd4043'>
+              <bucket>215</bucket>
+            </map>
+            <map to='#cf4244'>
+              <bucket>1421</bucket>
+            </map>
+            <map to='#d04444'>
+              <bucket>212</bucket>
+            </map>
+            <map to='#d34845'>
+              <bucket>210</bucket>
+            </map>
+            <map to='#d64b45'>
+              <bucket>185</bucket>
+            </map>
+            <map to='#d94f46'>
+              <bucket>174</bucket>
+            </map>
+            <map to='#db5347'>
+              <bucket>167</bucket>
+            </map>
+            <map to='#de5747'>
+              <bucket>165</bucket>
+            </map>
+            <map to='#e05b48'>
+              <bucket>163</bucket>
+            </map>
+            <map to='#e35e48'>
+              <bucket>160</bucket>
+            </map>
+            <map to='#e56249'>
+              <bucket>159</bucket>
+            </map>
+            <map to='#e56249'>
+              <bucket>1321</bucket>
+            </map>
+            <map to='#e76649'>
+              <bucket>158</bucket>
+            </map>
+            <map to='#e96a49'>
+              <bucket>132</bucket>
+            </map>
+            <map to='#eb6e49'>
+              <bucket>115</bucket>
+            </map>
+            <map to='#ee734a'>
+              <bucket>114</bucket>
+            </map>
+            <map to='#ee734a'>
+              <bucket>2193</bucket>
+            </map>
+            <map to='#ef764a'>
+              <bucket>109</bucket>
+            </map>
+            <map to='#f17a4a'>
+              <bucket>106</bucket>
+            </map>
+            <map to='#f37e4a'>
+              <bucket>96</bucket>
+            </map>
+            <map to='#f4c75f'>
+              <bucket>6</bucket>
+            </map>
+            <map to='#f4cc62'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#f4d166'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#f4d166'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#f4d166'>
+              <bucket>540</bucket>
+            </map>
+            <map to='#f4d166'>
+              <bucket>1961</bucket>
+            </map>
+            <map to='#f5824a'>
+              <bucket>86</bucket>
+            </map>
+            <map to='#f5be59'>
+              <bucket>11</bucket>
+            </map>
+            <map to='#f5c35c'>
+              <bucket>7</bucket>
+            </map>
+            <map to='#f6834b'>
+              <bucket>872</bucket>
+            </map>
+            <map to='#f6ba57'>
+              <bucket>18</bucket>
+            </map>
+            <map to='#f7864b'>
+              <bucket>76</bucket>
+            </map>
+            <map to='#f7b555'>
+              <bucket>19</bucket>
+            </map>
+            <map to='#f88b4c'>
+              <bucket>58</bucket>
+            </map>
+            <map to='#f8ab51'>
+              <bucket>22</bucket>
+            </map>
+            <map to='#f8b053'>
+              <bucket>20</bucket>
+            </map>
+            <map to='#f9a750'>
+              <bucket>29</bucket>
+            </map>
+            <map to='#f9aa51'>
+              <bucket>819</bucket>
+            </map>
+            <map to='#fa8f4d'>
+              <bucket>54</bucket>
+            </map>
+            <map to='#fa9d4f'>
+              <bucket>34</bucket>
+            </map>
+            <map to='#faa24f'>
+              <bucket>30</bucket>
+            </map>
+            <map to='#fb944d'>
+              <bucket>47</bucket>
+            </map>
+            <map to='#fb984e'>
+              <bucket>37</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='STATE' />
+        <field-sort-custom-order field='GENHLTH' />
+        <field-sort-custom-order field='MENTHLTH' />
+        <field-sort-custom-order field='Calculation_1607222124832878592' />
+        <field-sort-custom-order field='Mental Health 30 Day (copy)_1607222124852383746' />
+        <field-sort-custom-order field='Mental Health 30 Day (copy)_1607222124836827137' />
+        <field-sort-custom-order field='SEX' />
+        <field-sort-custom-order field='PHYSHLTH' />
+        <field-sort-custom-order field='MARITAL_STATUS' />
+        <field-sort-custom-order field='RACE' />
+        <field-sort-custom-order field='METRO_CODE' />
+        <field-sort-custom-order field='AGE_14LEVEL' />
+        <field-sort-custom-order field='AGE_2LEVEL' />
+        <field-sort-custom-order field='EDUCATION_LEVEL' />
+        <field-sort-custom-order field='HOME_STATUS' />
+        <field-sort-custom-order field='EMPLOYMENT_SITUATION' />
+        <field-sort-custom-order field='INCOME2' />
+        <field-sort-custom-order field='HEALTHY_ADULTS' />
+        <field-sort-custom-order field='BMI_5CAT' />
+        <field-sort-custom-order field='PHYS_ACT_INDX' />
+        <field-sort-custom-order field='DRINKS_WEEK' />
+        <field-sort-custom-order field='HAS_ARTHRITIS' />
+        <field-sort-custom-order field='ASTHMA_DISEASE' />
+        <field-sort-custom-order field='CORONARY_DISEASE' />
+        <field-sort-custom-order field='HIGH_CHOLESTEROL' />
+        <field-sort-custom-order field='BLOOD_PRESSURE' />
+        <field-sort-custom-order field='HEALTH_CVRAGE' />
+        <field-sort-custom-order field='INTERNET' />
+        <field-sort-custom-order field='VETERAN' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='cleaned_dashboard_data' id='cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905'>
+            <properties context=''>
+              <relation connection='postgres.0shdko001zudni1a8fump1tk2gx7' name='cleaned_dashboard_data' table='[public].[cleaned_dashboard_data]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_378EA69D9A28433FAB79FAD9E706B73C]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Patient Overview Dashboard' type='sheet' worksheet='patient_race' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Patient Overview Dashboard' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2_4AE8A57BFCB542A3B024C31154D8BD01]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Patient Overview Dashboard' type='sheet' worksheet='patient_sex' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Patient Overview Dashboard' />
+      </command>
+    </action>
+    <action caption='Filter 3 (generated)' name='[Action3_483ADE5AD1754F76A8A95B2F2BC5E2FF]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Patient Overview Dashboard' type='sheet' worksheet='patient_by_state' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Patient Overview Dashboard' />
+      </command>
+    </action>
+    <action caption='Filter 4 (generated)' name='[Action4_C6436AFA9F5943BAA912D9BCA7F7206C]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Patient Overview Dashboard' type='sheet' worksheet='patient_income' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Patient Overview Dashboard' />
+      </command>
+    </action>
+    <action caption='Filter 5 (generated)' name='[Action5_D8B2D724F30C4B3983C932158FB8AC84]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Patient Overview Dashboard' type='sheet' worksheet='patient_living_status' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Patient Overview Dashboard' />
+      </command>
+    </action>
+    <action caption='Filter 7 (generated)' name='[Action7_FE3B09E75A784297A794920F20352015]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Patient Overview Dashboard' type='sheet' worksheet='patient_marital_status' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Patient Overview Dashboard' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Sheet 9'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mltable (postgres)' name='federated.06hjz7105oz3ez19a69y313xh3ah' />
+          </datasources>
+          <datasource-dependencies datasource='federated.06hjz7105oz3ez19a69y313xh3ah'>
+            <column caption='Home Status' datatype='string' name='[HOME_STATUS]' role='dimension' type='nominal' />
+            <column caption='Menthlth' datatype='integer' name='[MENTHLTH]' role='measure' type='quantitative' />
+            <_.fcp.ObjectModelTableType.false...column caption='cleaned_dashboard_data' datatype='integer' name='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' role='measure' type='quantitative' />
+            <column caption='Veteran' datatype='string' name='[VETERAN]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='cleaned_dashboard_data' datatype='table' name='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[HOME_STATUS]' derivation='None' name='[none:HOME_STATUS:nk]' pivot='key' type='nominal' />
+            <column-instance column='[MENTHLTH]' derivation='None' name='[none:MENTHLTH:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[MENTHLTH]' derivation='None' name='[none:MENTHLTH:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[VETERAN]' derivation='None' name='[none:VETERAN:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[Exclusions (Menthlth,Veteran)]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='level-members' level='[none:MENTHLTH:qk]' />
+                <groupfilter function='level-members' level='[none:VETERAN:nk]' />
+              </groupfilter>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='union'>
+                  <groupfilter function='member' level='[none:MENTHLTH:qk]' member='88' />
+                  <groupfilter function='member' level='[none:MENTHLTH:qk]' member='99' />
+                </groupfilter>
+                <groupfilter function='union'>
+                  <groupfilter function='member' level='[none:VETERAN:nk]' member='&quot;No&quot;' />
+                  <groupfilter function='member' level='[none:VETERAN:nk]' member='&quot;Yes&quot;' />
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:HOME_STATUS:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:HOME_STATUS:nk]' />
+              <groupfilter function='except'>
+                <groupfilter function='level-members' level='[none:HOME_STATUS:nk]' />
+                <groupfilter function='union'>
+                  <groupfilter function='member' level='[none:HOME_STATUS:nk]' member='&quot;Own&quot;' />
+                  <groupfilter function='member' level='[none:HOME_STATUS:nk]' member='&quot;Rent&quot;' />
+                  <groupfilter function='member' level='[none:HOME_STATUS:nk]' member='%null%' />
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:MENTHLTH:ok]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:MENTHLTH:ok]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:MENTHLTH:ok]' member='88' />
+                <groupfilter function='member' level='[none:MENTHLTH:ok]' member='99' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[Exclusions (Menthlth,Veteran)]</column>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[none:MENTHLTH:ok]</column>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[none:HOME_STATUS:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:HOME_STATUS:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.06hjz7105oz3ez19a69y313xh3ah].[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]</rows>
+        <cols>[federated.06hjz7105oz3ez19a69y313xh3ah].[none:MENTHLTH:qk]</cols>
+      </table>
+      <simple-id uuid='{A14D76C9-87F1-4315-B208-7E68D45A403B}' />
+    </worksheet>
+    <worksheet name='States w/ Most 30Day'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>States With Most Month Long Mental Health Crises </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mltable (postgres)' name='federated.06hjz7105oz3ez19a69y313xh3ah' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.06hjz7105oz3ez19a69y313xh3ah'>
+            <column caption='Ment %' datatype='real' name='[Calculation_1607222124865331204]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Mental Health 30 Day (copy)_1607222124836827137]/COUNT([MENTHLTH])' />
+            </column>
+            <column caption='Menthlth' datatype='integer' name='[MENTHLTH]' role='measure' type='quantitative' />
+            <column caption='Mental Health Moderate/Severe' datatype='integer' name='[Mental Health 30 Day (copy)_1607222124836827137]' role='measure' type='ordinal'>
+              <calculation class='tableau' formula='SUM(IF [MENTHLTH] &gt;=16 THEN 1 END)' />
+            </column>
+            <column caption='State' datatype='string' name='[STATE]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[MENTHLTH]' derivation='Count' name='[cnt:MENTHLTH:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[STATE]' derivation='None' name='[none:STATE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1607222124865331204]' derivation='User' name='[usr:Calculation_1607222124865331204:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:STATE:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:STATE:nk]' />
+              <groupfilter function='member' level='[none:STATE:nk]' member='&quot;Dont Know&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[none:STATE:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[Longitude (generated)]' field-type='quantitative' max='32676748.528277773' min='26262073.111196145' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[Latitude (generated)]' field-type='quantitative' max='6340516.1419128012' min='2725131.2605085317' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Calculation_1607222124865331204:qk]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Calculation_1607222124865331204:qk]' palette='red_gold_10_0' type='interpolated' />
+            <encoding attr='color' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[cnt:MENTHLTH:qk]' palette='red_gold_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='light' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='area-brown-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Calculation_1607222124865331204:qk]' />
+              <size column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:STATE:nk]' />
+              <text column='[federated.06hjz7105oz3ez19a69y313xh3ah].[cnt:MENTHLTH:qk]' />
+              <text column='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Calculation_1607222124865331204:qk]' />
+              <geometry column='[federated.06hjz7105oz3ez19a69y313xh3ah].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='color' value='#1b1b1b' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.06hjz7105oz3ez19a69y313xh3ah].[Latitude (generated)]</rows>
+        <cols>[federated.06hjz7105oz3ez19a69y313xh3ah].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{EA26F6E4-8D6E-4B4D-B2DA-65A72830D3A3}' />
+    </worksheet>
+    <worksheet name='States w/ Most 30Day (2)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>States With Most Month Long Mental Health Crises </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mltable (postgres)' name='federated.06hjz7105oz3ez19a69y313xh3ah' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.06hjz7105oz3ez19a69y313xh3ah'>
+            <column caption='Ment %' datatype='real' name='[Calculation_1607222124865331204]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Mental Health 30 Day (copy)_1607222124836827137]/COUNT([MENTHLTH])' />
+            </column>
+            <column caption='Menthlth' datatype='integer' name='[MENTHLTH]' role='measure' type='quantitative' />
+            <column caption='Mental Health Moderate/Severe' datatype='integer' name='[Mental Health 30 Day (copy)_1607222124836827137]' role='measure' type='ordinal'>
+              <calculation class='tableau' formula='SUM(IF [MENTHLTH] &gt;=16 THEN 1 END)' />
+            </column>
+            <_.fcp.ObjectModelTableType.false...column caption='cleaned_dashboard_data' datatype='integer' name='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' role='measure' type='quantitative' />
+            <column caption='State' datatype='string' name='[STATE]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='cleaned_dashboard_data' datatype='table' name='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[STATE]' derivation='None' name='[none:STATE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1607222124865331204]' derivation='User' name='[usr:Calculation_1607222124865331204:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:STATE:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:STATE:nk]' />
+              <groupfilter function='member' level='[none:STATE:nk]' member='&quot;Dont Know&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[none:STATE:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[Longitude (generated)]' field-type='quantitative' max='-14830738.279836614' min='-18801893.627585959' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[Latitude (generated)]' field-type='quantitative' max='11902557.824492648' min='6907588.988651677' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Calculation_1607222124865331204:qk]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Calculation_1607222124865331204:qk]' palette='red_gold_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='light' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='area-brown-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Calculation_1607222124865331204:qk]' />
+              <size column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:STATE:nk]' />
+              <text column='[federated.06hjz7105oz3ez19a69y313xh3ah].[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' />
+              <text column='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Calculation_1607222124865331204:qk]' />
+              <geometry column='[federated.06hjz7105oz3ez19a69y313xh3ah].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='color' value='#1b1b1b' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.06hjz7105oz3ez19a69y313xh3ah].[Latitude (generated)]</rows>
+        <cols>[federated.06hjz7105oz3ez19a69y313xh3ah].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{F73C44B4-8462-4F37-9BB2-E30BE9463051}' />
+    </worksheet>
+    <worksheet name='States w/ Most 30Day (3)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>States With Most Month Long Mental Health Crises </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mltable (postgres)' name='federated.06hjz7105oz3ez19a69y313xh3ah' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.06hjz7105oz3ez19a69y313xh3ah'>
+            <column caption='Ment %' datatype='real' name='[Calculation_1607222124865331204]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Mental Health 30 Day (copy)_1607222124836827137]/COUNT([MENTHLTH])' />
+            </column>
+            <column caption='Menthlth' datatype='integer' name='[MENTHLTH]' role='measure' type='quantitative' />
+            <column caption='Mental Health Moderate/Severe' datatype='integer' name='[Mental Health 30 Day (copy)_1607222124836827137]' role='measure' type='ordinal'>
+              <calculation class='tableau' formula='SUM(IF [MENTHLTH] &gt;=16 THEN 1 END)' />
+            </column>
+            <column caption='State' datatype='string' name='[STATE]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[MENTHLTH]' derivation='Count' name='[cnt:MENTHLTH:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[STATE]' derivation='None' name='[none:STATE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1607222124865331204]' derivation='User' name='[usr:Calculation_1607222124865331204:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:STATE:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:STATE:nk]' />
+              <groupfilter function='member' level='[none:STATE:nk]' member='&quot;Dont Know&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[none:STATE:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[Longitude (generated)]' field-type='quantitative' max='-17171123.078770272' min='-17900789.708191108' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[Latitude (generated)]' field-type='quantitative' max='2726274.7495581824' min='2086051.1280079584' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Calculation_1607222124865331204:qk]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Calculation_1607222124865331204:qk]' palette='red_gold_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='light' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='area-brown-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Calculation_1607222124865331204:qk]' />
+              <size column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:STATE:nk]' />
+              <text column='[federated.06hjz7105oz3ez19a69y313xh3ah].[cnt:MENTHLTH:qk]' />
+              <text column='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Calculation_1607222124865331204:qk]' />
+              <geometry column='[federated.06hjz7105oz3ez19a69y313xh3ah].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='color' value='#1b1b1b' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.06hjz7105oz3ez19a69y313xh3ah].[Latitude (generated)]</rows>
+        <cols>[federated.06hjz7105oz3ez19a69y313xh3ah].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{5C73A7C3-AF39-485F-8550-C97BCF8655BE}' />
+    </worksheet>
+    <worksheet name='patient_age'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Patients w/ Moderate/Severe Mental Health</run>
+            <run>Æ&#10;&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mltable (postgres)' name='federated.06hjz7105oz3ez19a69y313xh3ah' />
+          </datasources>
+          <datasource-dependencies datasource='federated.06hjz7105oz3ez19a69y313xh3ah'>
+            <column caption='Age 14Level' datatype='string' name='[AGE_14LEVEL]' role='dimension' type='nominal' />
+            <column caption='Menthlth' datatype='integer' name='[MENTHLTH]' role='measure' type='quantitative' />
+            <column caption='Mental Health Moderate/Severe' datatype='integer' name='[Mental Health 30 Day (copy)_1607222124836827137]' role='measure' type='ordinal'>
+              <calculation class='tableau' formula='SUM(IF [MENTHLTH] &gt;=16 THEN 1 END)' />
+            </column>
+            <_.fcp.ObjectModelTableType.false...column caption='cleaned_dashboard_data' datatype='integer' name='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' role='measure' type='quantitative' />
+            <column datatype='string' name='[SEX]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='cleaned_dashboard_data' datatype='table' name='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[AGE_14LEVEL]' derivation='None' name='[none:AGE_14LEVEL:nk]' pivot='key' type='nominal' />
+            <column-instance column='[MENTHLTH]' derivation='None' name='[none:MENTHLTH:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[SEX]' derivation='None' name='[none:SEX:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Mental Health 30 Day (copy)_1607222124836827137]' derivation='User' name='[usr:Mental Health 30 Day (copy)_1607222124836827137:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:AGE_14LEVEL:nk]' kind='hide'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:AGE_14LEVEL:nk]' />
+              <groupfilter function='member' level='[none:AGE_14LEVEL:nk]' member='&quot;Dont know&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:MENTHLTH:qk]' included-values='in-range'>
+            <min>1</min>
+            <max>30</max>
+          </filter>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:SEX:nk]'>
+            <groupfilter function='level-members' level='[none:SEX:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[none:MENTHLTH:qk]</column>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[none:SEX:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' scope='rows' value='# of Patients' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Mental Health 30 Day (copy)_1607222124836827137:ok]' value='bold' />
+            <format attr='color' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Mental Health 30 Day (copy)_1607222124836827137:ok]' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:AGE_14LEVEL:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.06hjz7105oz3ez19a69y313xh3ah].[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]</rows>
+        <cols>([federated.06hjz7105oz3ez19a69y313xh3ah].[none:AGE_14LEVEL:nk] / [federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Mental Health 30 Day (copy)_1607222124836827137:ok])</cols>
+      </table>
+      <simple-id uuid='{87253B71-43BF-445D-8A8C-0C918F024879}' />
+    </worksheet>
+    <worksheet name='patient_age (2)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Patients with &gt; 2 Weeks of Mental Health problems + BMI</run>
+            <run>Æ&#10;&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mltable (postgres)' name='federated.06hjz7105oz3ez19a69y313xh3ah' />
+          </datasources>
+          <datasource-dependencies datasource='federated.06hjz7105oz3ez19a69y313xh3ah'>
+            <column caption='Bmi 5Cat' datatype='string' name='[BMI_5CAT]' role='dimension' type='nominal' />
+            <column caption='Menthlth' datatype='integer' name='[MENTHLTH]' role='measure' type='quantitative' />
+            <_.fcp.ObjectModelTableType.false...column caption='cleaned_dashboard_data' datatype='integer' name='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' role='measure' type='quantitative' />
+            <column caption='Mental Health Moderate/Severe' datatype='integer' name='[Mental Health 30 Day (copy)_1607222124836827137]' role='measure' type='ordinal'>
+              <calculation class='tableau' formula='SUM(IF [MENTHLTH] &gt;=16 THEN 1 END)' />
+            </column>
+            <_.fcp.ObjectModelTableType.true...column caption='cleaned_dashboard_data' datatype='table' name='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[BMI_5CAT]' derivation='None' name='[none:BMI_5CAT:nk]' pivot='key' type='nominal' />
+            <column-instance column='[MENTHLTH]' derivation='None' name='[none:MENTHLTH:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Mental Health 30 Day (copy)_1607222124836827137]' derivation='User' name='[usr:Mental Health 30 Day (copy)_1607222124836827137:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:BMI_5CAT:nk]' kind='hide'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:BMI_5CAT:nk]' />
+              <groupfilter function='member' level='[none:BMI_5CAT:nk]' member='&quot;Underweight&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:MENTHLTH:qk]' included-values='in-range'>
+            <min>1</min>
+            <max>30</max>
+          </filter>
+          <slices>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[none:MENTHLTH:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='color' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' palette='red_gold_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Mental Health 30 Day (copy)_1607222124836827137:ok]' />
+              <lod column='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Mental Health 30 Day (copy)_1607222124836827137:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='has-stroke' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.06hjz7105oz3ez19a69y313xh3ah].[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]</rows>
+        <cols>[federated.06hjz7105oz3ez19a69y313xh3ah].[none:BMI_5CAT:nk]</cols>
+      </table>
+      <simple-id uuid='{2641BA79-C3D6-4073-B537-8FFF3A15A9AC}' />
+    </worksheet>
+    <worksheet name='patient_by_state'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mltable (postgres)' name='federated.06hjz7105oz3ez19a69y313xh3ah' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.06hjz7105oz3ez19a69y313xh3ah'>
+            <column caption='Age 14Level' datatype='string' name='[AGE_14LEVEL]' role='dimension' type='nominal' />
+            <column caption='Home Status' datatype='string' name='[HOME_STATUS]' role='dimension' type='nominal' />
+            <column caption='Income2' datatype='string' name='[INCOME2]' role='dimension' type='nominal' />
+            <column datatype='string' name='[SEX]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='cleaned_dashboard_data' datatype='integer' name='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' role='measure' type='quantitative' />
+            <column caption='State' datatype='string' name='[STATE]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='cleaned_dashboard_data' datatype='table' name='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[STATE]' derivation='None' name='[none:STATE:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Age 14Level)]'>
+            <groupfilter function='level-members' level='[AGE_14LEVEL]' user:ui-action-filter='[Action6_ACD0C565FBFD4CB5A491BFEF7AFD0FF2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Home Status)]'>
+            <groupfilter function='level-members' level='[HOME_STATUS]' user:ui-action-filter='[Action5_D8B2D724F30C4B3983C932158FB8AC84]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Income2)]'>
+            <groupfilter function='level-members' level='[INCOME2]' user:ui-action-filter='[Action4_C6436AFA9F5943BAA912D9BCA7F7206C]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (SEX)]'>
+            <groupfilter function='level-members' level='[SEX]' user:ui-action-filter='[Action2_4AE8A57BFCB542A3B024C31154D8BD01]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (SEX)]</column>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Income2)]</column>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Home Status)]</column>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Age 14Level)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[Longitude (generated)]' field-type='quantitative' max='-7480345.8775298363' min='-14635813.151307609' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[Latitude (generated)]' field-type='quantitative' max='6420334.1078378949' min='2641604.2471349258' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.06hjz7105oz3ez19a69y313xh3ah].[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' />
+              <tooltip column='[federated.06hjz7105oz3ez19a69y313xh3ah].[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' />
+              <text column='[federated.06hjz7105oz3ez19a69y313xh3ah].[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' />
+              <lod column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:STATE:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.06hjz7105oz3ez19a69y313xh3ah].[Latitude (generated)]</rows>
+        <cols>[federated.06hjz7105oz3ez19a69y313xh3ah].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{E1B0362D-52F4-43C3-9E9F-F3E37CA4B829}' />
+    </worksheet>
+    <worksheet name='patient_income'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mltable (postgres)' name='federated.06hjz7105oz3ez19a69y313xh3ah' />
+          </datasources>
+          <datasource-dependencies datasource='federated.06hjz7105oz3ez19a69y313xh3ah'>
+            <column caption='Age 14Level' datatype='string' name='[AGE_14LEVEL]' role='dimension' type='nominal' />
+            <column caption='Home Status' datatype='string' name='[HOME_STATUS]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='cleaned_dashboard_data' datatype='integer' name='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' role='measure' type='quantitative' />
+            <column caption='Income2' datatype='string' name='[INCOME2]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='cleaned_dashboard_data' datatype='table' name='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[INCOME2]' derivation='None' name='[none:INCOME2:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Age 14Level)]'>
+            <groupfilter function='level-members' level='[AGE_14LEVEL]' user:ui-action-filter='[Action6_ACD0C565FBFD4CB5A491BFEF7AFD0FF2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Home Status)]'>
+            <groupfilter function='level-members' level='[HOME_STATUS]' user:ui-action-filter='[Action5_D8B2D724F30C4B3983C932158FB8AC84]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Home Status)]</column>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Age 14Level)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' scope='cols' value='$ Income of Patient' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.06hjz7105oz3ez19a69y313xh3ah].[none:INCOME2:nk]</rows>
+        <cols>[federated.06hjz7105oz3ez19a69y313xh3ah].[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]</cols>
+      </table>
+      <simple-id uuid='{28EB552B-6ABD-4BB2-8FAE-223BFC3D2184}' />
+    </worksheet>
+    <worksheet name='patient_living_status'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mltable (postgres)' name='federated.06hjz7105oz3ez19a69y313xh3ah' />
+          </datasources>
+          <datasource-dependencies datasource='federated.06hjz7105oz3ez19a69y313xh3ah'>
+            <column caption='Age 14Level' datatype='string' name='[AGE_14LEVEL]' role='dimension' type='nominal' />
+            <column caption='Home Status' datatype='string' name='[HOME_STATUS]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='cleaned_dashboard_data' datatype='integer' name='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' role='measure' type='quantitative' />
+            <column caption='Income2' datatype='string' name='[INCOME2]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='cleaned_dashboard_data' datatype='table' name='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[HOME_STATUS]' derivation='None' name='[none:HOME_STATUS:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Age 14Level)]'>
+            <groupfilter function='level-members' level='[AGE_14LEVEL]' user:ui-action-filter='[Action6_ACD0C565FBFD4CB5A491BFEF7AFD0FF2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Income2)]'>
+            <groupfilter function='level-members' level='[INCOME2]' user:ui-action-filter='[Action4_C6436AFA9F5943BAA912D9BCA7F7206C]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:HOME_STATUS:nk]' kind='hide'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:HOME_STATUS:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:HOME_STATUS:nk]' member='&quot;Don’t Know&quot;' />
+                <groupfilter function='member' level='[none:HOME_STATUS:nk]' member='&quot;DOnt know&quot;' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Income2)]</column>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Age 14Level)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' scope='cols' value='# of Patients' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.06hjz7105oz3ez19a69y313xh3ah].[none:HOME_STATUS:nk]</rows>
+        <cols>[federated.06hjz7105oz3ez19a69y313xh3ah].[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]</cols>
+      </table>
+      <simple-id uuid='{27F86CD9-D0C7-4F79-A920-15ECC94718DA}' />
+    </worksheet>
+    <worksheet name='patient_marital_status'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mltable (postgres)' name='federated.06hjz7105oz3ez19a69y313xh3ah' />
+          </datasources>
+          <datasource-dependencies datasource='federated.06hjz7105oz3ez19a69y313xh3ah'>
+            <column caption='Age 14Level' datatype='string' name='[AGE_14LEVEL]' role='dimension' type='nominal' />
+            <column caption='Home Status' datatype='string' name='[HOME_STATUS]' role='dimension' type='nominal' />
+            <column caption='Income2' datatype='string' name='[INCOME2]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='cleaned_dashboard_data' datatype='integer' name='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' role='measure' type='quantitative' />
+            <column caption='Marital Status' datatype='string' name='[MARITAL_STATUS]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;Member of an unmarried couple&quot;' value='Unmarried couple' />
+              </aliases>
+            </column>
+            <_.fcp.ObjectModelTableType.true...column caption='cleaned_dashboard_data' datatype='table' name='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[MARITAL_STATUS]' derivation='None' name='[none:MARITAL_STATUS:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Age 14Level)]'>
+            <groupfilter function='level-members' level='[AGE_14LEVEL]' user:ui-action-filter='[Action6_ACD0C565FBFD4CB5A491BFEF7AFD0FF2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Home Status)]'>
+            <groupfilter function='level-members' level='[HOME_STATUS]' user:ui-action-filter='[Action5_D8B2D724F30C4B3983C932158FB8AC84]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Income2)]'>
+            <groupfilter function='level-members' level='[INCOME2]' user:ui-action-filter='[Action4_C6436AFA9F5943BAA912D9BCA7F7206C]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:MARITAL_STATUS:nk]' kind='hide'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:MARITAL_STATUS:nk]' />
+              <groupfilter function='member' level='[none:MARITAL_STATUS:nk]' member='&quot;Dont know&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Income2)]</column>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Age 14Level)]</column>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Home Status)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.06hjz7105oz3ez19a69y313xh3ah].[none:MARITAL_STATUS:nk]</rows>
+        <cols>[federated.06hjz7105oz3ez19a69y313xh3ah].[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]</cols>
+      </table>
+      <simple-id uuid='{EEEAA476-51A4-46DE-A260-24B5CF7680E7}' />
+    </worksheet>
+    <worksheet name='patient_race'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mltable (postgres)' name='federated.06hjz7105oz3ez19a69y313xh3ah' />
+          </datasources>
+          <datasource-dependencies datasource='federated.06hjz7105oz3ez19a69y313xh3ah'>
+            <column caption='Age 14Level' datatype='string' name='[AGE_14LEVEL]' role='dimension' type='nominal' />
+            <column caption='Home Status' datatype='string' name='[HOME_STATUS]' role='dimension' type='nominal' />
+            <column caption='Income2' datatype='string' name='[INCOME2]' role='dimension' type='nominal' />
+            <column caption='Race' datatype='string' name='[RACE]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='cleaned_dashboard_data' datatype='integer' name='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' role='measure' type='quantitative' />
+            <column datatype='string' name='[SEX]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='cleaned_dashboard_data' datatype='table' name='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[RACE]' derivation='None' name='[none:RACE:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Age 14Level)]'>
+            <groupfilter function='level-members' level='[AGE_14LEVEL]' user:ui-action-filter='[Action6_ACD0C565FBFD4CB5A491BFEF7AFD0FF2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Home Status)]'>
+            <groupfilter function='level-members' level='[HOME_STATUS]' user:ui-action-filter='[Action5_D8B2D724F30C4B3983C932158FB8AC84]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Income2)]'>
+            <groupfilter function='level-members' level='[INCOME2]' user:ui-action-filter='[Action4_C6436AFA9F5943BAA912D9BCA7F7206C]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (SEX)]'>
+            <groupfilter function='level-members' level='[SEX]' user:ui-action-filter='[Action2_4AE8A57BFCB542A3B024C31154D8BD01]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (SEX)]</column>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Income2)]</column>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Home Status)]</column>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Age 14Level)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' scope='cols' value='# of Patients' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.06hjz7105oz3ez19a69y313xh3ah].[none:RACE:nk]</rows>
+        <cols>[federated.06hjz7105oz3ez19a69y313xh3ah].[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]</cols>
+      </table>
+      <simple-id uuid='{A2F44AFD-7B5F-41FD-9B49-E90F08DCB0E2}' />
+    </worksheet>
+    <worksheet name='patient_sex'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mltable (postgres)' name='federated.06hjz7105oz3ez19a69y313xh3ah' />
+          </datasources>
+          <datasource-dependencies datasource='federated.06hjz7105oz3ez19a69y313xh3ah'>
+            <column caption='Age 14Level' datatype='string' name='[AGE_14LEVEL]' role='dimension' type='nominal' />
+            <column caption='Home Status' datatype='string' name='[HOME_STATUS]' role='dimension' type='nominal' />
+            <column caption='Income2' datatype='string' name='[INCOME2]' role='dimension' type='nominal' />
+            <column caption='Race' datatype='string' name='[RACE]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='cleaned_dashboard_data' datatype='integer' name='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' role='measure' type='quantitative' />
+            <column datatype='string' name='[SEX]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='cleaned_dashboard_data' datatype='table' name='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[RACE]' derivation='None' name='[none:RACE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[SEX]' derivation='None' name='[none:SEX:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Age 14Level)]'>
+            <groupfilter function='level-members' level='[AGE_14LEVEL]' user:ui-action-filter='[Action6_ACD0C565FBFD4CB5A491BFEF7AFD0FF2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Home Status)]'>
+            <groupfilter function='level-members' level='[HOME_STATUS]' user:ui-action-filter='[Action5_D8B2D724F30C4B3983C932158FB8AC84]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Income2)]'>
+            <groupfilter function='level-members' level='[INCOME2]' user:ui-action-filter='[Action4_C6436AFA9F5943BAA912D9BCA7F7206C]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Income2)]</column>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Home Status)]</column>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[Action (Age 14Level)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' scope='cols' value='# of Patients' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.06hjz7105oz3ez19a69y313xh3ah].[none:SEX:nk]</rows>
+        <cols>[federated.06hjz7105oz3ez19a69y313xh3ah].[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]</cols>
+      </table>
+      <simple-id uuid='{ECFFE01D-30C8-4302-9EEC-E3BF341F3723}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Analysis DB'>
+      <style />
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='mltable (postgres)' name='federated.06hjz7105oz3ez19a69y313xh3ah' />
+      </datasources>
+      <datasource-dependencies datasource='federated.06hjz7105oz3ez19a69y313xh3ah'>
+        <column datatype='string' name='[SEX]' role='dimension' type='nominal' />
+        <column-instance column='[SEX]' derivation='None' name='[none:SEX:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='35' param='horz' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='97916' id='33' type-v2='layout-basic' w='87115' x='586' y='1042'>
+              <zone h='97916' id='26' param='horz' type-v2='layout-flow' w='43756' x='586' y='1042'>
+                <zone h='97916' id='21' param='horz' type-v2='layout-flow' w='43756' x='586' y='1042'>
+                  <zone h='97916' id='17' param='horz' type-v2='layout-flow' w='43756' x='586' y='1042'>
+                    <zone h='97916' id='14' param='horz' type-v2='layout-flow' w='43756' x='586' y='1042'>
+                      <zone h='97916' id='7' param='horz' type-v2='layout-flow' w='43756' x='586' y='1042'>
+                        <zone h='97916' id='5' type-v2='layout-basic' w='43756' x='586' y='1042' />
+                      </zone>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+              <zone forceUpdate='true' h='97916' id='32' type-v2='text' w='43359' x='44342' y='1042'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='97916' id='34' is-fixed='true' param='vert' type-v2='layout-flow' w='11713' x='87701' y='1042' />
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='50000' id='3' name='States w/ Most 30Day' show-title='false' w='53587' x='220' y='50000' />
+        <zone h='17708' id='12' name='States w/ Most 30Day (2)' show-title='false' w='10176' x='43558' y='81901' />
+        <zone h='15104' id='15' name='States w/ Most 30Day (3)' show-title='false' w='7247' x='439' y='84245' />
+        <zone h='40625' id='18' is-centered='0' is-scaled='1' param='C:/Users/mille/Desktop/Bootcamp Materials/Healthcare_Analysis/Images/MENTvPHYS.png' type-v2='bitmap' w='53587' x='220' y='5599' />
+        <zone h='99089' id='24' name='patient_age' w='45827' x='54319' y='391' />
+        <zone h='11589' id='27' name='patient_age' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:SEX:nk]' type-v2='filter' w='12299' x='88360' y='391' />
+        <zone forceUpdate='true' h='5469' id='36' type-v2='text' w='45168' x='3807' y='260'>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontsize='14'>Implied Mental Health Vs. Implied Physical Health Problems</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='5469' id='37' type-v2='text' w='53734' x='2343' y='45052'>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontsize='14'>State Total Patients &amp; Percentage with Moderate/Severe Mental Health</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1250' minheight='1250' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='31' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='30' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone fixed-size='280' h='45182' id='18' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/mille/Desktop/Bootcamp Materials/Healthcare_Analysis/Images/MENTvPHYS.png' type-v2='bitmap' w='53587' x='220' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='11589' id='27' mode='checkdropdown' name='patient_age' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:SEX:nk]' type-v2='filter' w='12299' x='87335' y='651'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='99089' id='24' is-fixed='true' name='patient_age' w='45827' x='53953' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='53776' id='3' is-fixed='true' name='States w/ Most 30Day' show-title='false' w='53587' x='220' y='46224'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='148' h='19271' id='12' is-fixed='true' name='States w/ Most 30Day (2)' show-title='false' w='11420' x='42313' y='80339'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='116' h='15104' id='15' is-fixed='true' name='States w/ Most 30Day (3)' show-title='false' w='7247' x='439' y='84245'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{51125D22-75DB-4695-B03B-B1EB894885F1}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Machine Learning'>
+      <style />
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='9' is-centered='0' param='C:/Users/mille/Desktop/image (2).png' type-v2='bitmap' w='98828' x='586' y='1042'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='53906' id='6' is-centered='0' is-scaled='1' param='C:/Users/mille/Desktop/image (1).png' type-v2='bitmap' w='53148' x='53587' y='-391' />
+        <zone h='47005' id='5' is-centered='0' param='C:/Users/mille/Desktop/all_features.png' type-v2='bitmap' w='59590' x='-659' y='51042' />
+        <zone h='45833' id='8' is-centered='0' is-scaled='1' param='C:/Users/mille/Desktop/image.png' type-v2='bitmap' w='46047' x='60615' y='54036' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1200' minheight='1200' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='13' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='12' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone fixed-size='280' h='53906' id='6' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/mille/Desktop/image (1).png' type-v2='bitmap' w='53148' x='53587' y='-391'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='97916' id='9' is-centered='0' is-fixed='true' param='C:/Users/mille/Desktop/image (2).png' type-v2='bitmap' w='98828' x='586' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='47005' id='5' is-centered='0' is-fixed='true' param='C:/Users/mille/Desktop/all_features.png' type-v2='bitmap' w='59590' x='-659' y='51042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='45833' id='8' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/mille/Desktop/image.png' type-v2='bitmap' w='46047' x='60615' y='54036'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{1A6AB1A7-A912-419B-AF5B-04B2539230CF}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Patient Health Dashboard'>
+      <style />
+      <size maxheight='1024' maxwidth='1024' minheight='1024' minwidth='1024' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='16' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98438' id='19' param='horz' type-v2='layout-flow' w='98438' x='781' y='781'>
+            <zone h='98438' id='17' type-v2='layout-basic' w='98438' x='781' y='781' />
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='23926' id='15' name='States w/ Most 30Day' w='99707' x='-98' y='33887' />
+      </zones>
+      <devicelayouts>
+        <devicelayout active='true' name='Desktop'>
+          <zones>
+            <zone h='23926' id='15' name='States w/ Most 30Day' w='99707' x='-98' y='33887' />
+          </zones>
+        </devicelayout>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='25' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98438' id='24' param='vert' type-v2='layout-flow' w='98438' x='781' y='781'>
+                <zone fixed-size='245' h='23926' id='15' is-fixed='true' name='States w/ Most 30Day' w='99707' x='-98' y='33887'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{416091F7-CC87-4E33-A5B3-261D27EF8130}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Patient Overview Dashboard'>
+      <style />
+      <size maxheight='1024' maxwidth='1024' minheight='1024' minwidth='1024' preset-index='2' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='mltable (postgres)' name='federated.06hjz7105oz3ez19a69y313xh3ah' />
+      </datasources>
+      <datasource-dependencies datasource='federated.06hjz7105oz3ez19a69y313xh3ah'>
+        <column caption='Race' datatype='string' name='[RACE]' role='dimension' type='nominal' />
+        <column datatype='string' name='[SEX]' role='dimension' type='nominal' />
+        <column-instance column='[RACE]' derivation='None' name='[none:RACE:nk]' pivot='key' type='nominal' />
+        <column-instance column='[SEX]' derivation='None' name='[none:SEX:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='27930' id='4' name='patient_race' w='46191' x='37207' y='1465' />
+        <zone h='14355' id='5' name='patient_sex' w='36328' x='586' y='1465' />
+        <zone h='8203' id='6' name='patient_sex' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:SEX:nk]' type-v2='filter' w='10449' x='83301' y='781' />
+        <zone h='21680' id='7' name='patient_sex' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:RACE:nk]' type-v2='filter' values='database' w='16016' x='83203' y='9180' />
+        <zone h='36426' id='10' name='patient_by_state' w='60938' x='38574' y='30469' />
+        <zone h='21582' id='17' name='patient_income' w='37012' x='293' y='17285' />
+        <zone h='15820' id='18' name='patient_living_status' w='38086' x='0' y='43652' />
+        <zone h='23926' id='19' name='patient_marital_status' w='37793' x='195' y='63574' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1500' minheight='1500' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='40' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98438' id='39' param='vert' type-v2='layout-flow' w='98438' x='781' y='781'>
+                <zone h='8203' id='6' mode='checkdropdown' name='patient_sex' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:SEX:nk]' type-v2='filter' w='10449' x='83301' y='781'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='21680' id='7' mode='checkdropdown' name='patient_sex' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:RACE:nk]' type-v2='filter' values='database' w='16016' x='83203' y='9180'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='147' h='14355' id='5' is-fixed='true' name='patient_sex' w='36328' x='586' y='1465'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='27930' id='4' is-fixed='true' name='patient_race' w='46191' x='37207' y='1465'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='221' h='21582' id='17' is-fixed='true' name='patient_income' w='37012' x='293' y='17285'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='36426' id='10' is-fixed='true' name='patient_by_state' w='60938' x='38574' y='30469'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='162' h='15820' id='18' is-fixed='true' name='patient_living_status' w='38086' x='0' y='43652'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='245' h='23926' id='19' is-fixed='true' name='patient_marital_status' w='37793' x='195' y='63574'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{0B763E3B-B529-49F3-9BEF-2609FD007D9F}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='patient_sex'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:RACE:nk]' type='filter' />
+            <card param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:SEX:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A926910A-6282-40BE-A785-EB31F3487F49}' />
+    </window>
+    <window class='worksheet' name='patient_race'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D5B37559-80B7-46EC-9FD1-F41D9E32026D}' />
+    </window>
+    <window class='worksheet' name='patient_by_state'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{620D16D3-6D61-43F4-AFDF-8597E0C4AD9C}' />
+    </window>
+    <window class='worksheet' name='patient_income'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1781E18A-C07B-46EE-A1A9-62ACBE631409}' />
+    </window>
+    <window class='worksheet' name='patient_living_status'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FFF369FD-15FE-49CC-9753-DDFC58CA3237}' />
+    </window>
+    <window class='worksheet' name='patient_marital_status'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{06522523-5F38-42EF-A8B8-2C6976E28EFB}' />
+    </window>
+    <window class='worksheet' name='patient_age'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:AGE_14LEVEL:nk]' type='color' />
+          </strip>
+          <strip size='160'>
+            <card param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:SEX:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F3DDE84A-A7AD-467B-AE26-ABF8456E15F8}' />
+    </window>
+    <window class='worksheet' name='patient_age (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Mental Health 30 Day (copy)_1607222124836827137:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B8DEADBF-EB05-4339-81F2-324DCAC31371}' />
+    </window>
+    <window class='dashboard' name='Patient Overview Dashboard'>
+      <viewpoints>
+        <viewpoint name='patient_by_state'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='patient_income' />
+        <viewpoint name='patient_living_status' />
+        <viewpoint name='patient_marital_status' />
+        <viewpoint name='patient_race' />
+        <viewpoint name='patient_sex' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{F3431BD4-5153-46D3-A0A9-D6261BD84AFA}' />
+    </window>
+    <window class='dashboard' name='Patient Health Dashboard'>
+      <viewpoints>
+        <viewpoint name='States w/ Most 30Day'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{C5429E39-62FC-4B94-9350-E0F86A245580}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Analysis DB'>
+      <viewpoints>
+        <viewpoint name='States w/ Most 30Day'>
+          <zoom type='entire-view' />
+          <default-map-tool-selection tool='2' />
+        </viewpoint>
+        <viewpoint name='States w/ Most 30Day (2)'>
+          <zoom type='entire-view' />
+          <floating-toolbar-visibility value='2' />
+        </viewpoint>
+        <viewpoint name='States w/ Most 30Day (3)'>
+          <zoom type='entire-view' />
+          <floating-toolbar-visibility value='2' />
+        </viewpoint>
+        <viewpoint name='patient_age'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <device-preview>
+        <device name='Medium Desktop Monitor' type='Desktop' />
+      </device-preview>
+      <simple-id uuid='{52B2E194-DED6-4ECD-A5C3-6FFF93BAE9E7}' />
+    </window>
+    <window class='dashboard' name='Machine Learning'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{A89F74A6-C0FE-48EE-9840-8D9F7D67B436}' />
+    </window>
+    <window class='worksheet' name='States w/ Most 30Day (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Calculation_1607222124865331204:qk]' type='color' />
+            <card pane-specification-id='2' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:STATE:nk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <floating-toolbar-visibility value='2' />
+      </viewpoint>
+      <simple-id uuid='{189C2509-C59E-4934-8C9B-594F1CF0F9B9}' />
+    </window>
+    <window class='worksheet' name='States w/ Most 30Day'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Calculation_1607222124865331204:qk]' type='color' />
+            <card pane-specification-id='2' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:STATE:nk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <floating-toolbar-visibility value='2' />
+      </viewpoint>
+      <simple-id uuid='{89A710F1-0EC5-4A04-955D-9B4EFC12CE0D}' />
+    </window>
+    <window class='worksheet' name='States w/ Most 30Day (3)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Calculation_1607222124865331204:qk]' type='color' />
+            <card pane-specification-id='2' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:STATE:nk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <floating-toolbar-visibility value='2' />
+      </viewpoint>
+      <simple-id uuid='{90629884-36B4-4D7F-AE02-E073B15720FD}' />
+    </window>
+    <window class='worksheet' name='Sheet 9'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='5' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:HOME_STATUS:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{86AFBDD6-B85C-4D08-A3AE-58F5C7382A20}' />
+    </window>
+  </windows>
+</workbook>
