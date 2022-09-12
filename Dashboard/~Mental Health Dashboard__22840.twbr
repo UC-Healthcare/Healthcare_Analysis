@@ -14,6 +14,7 @@
     <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
     <SetMembershipControl />
     <SheetIdentifierTracking />
+    <SortTagCleanup />
     <WindowsPersistSimpleIdentifiers />
     <WorksheetBackgroundTransparency />
     <ZoneBackgroundTransparency />
@@ -1449,6 +1450,117 @@
     </action>
   </actions>
   <worksheets>
+    <worksheet name='Full Interactive Patient Age'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Patients w/ Moderate/Severe Mental Health</run>
+            <run>Æ&#10;&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mltable (postgres)' name='federated.06hjz7105oz3ez19a69y313xh3ah' />
+          </datasources>
+          <datasource-dependencies datasource='federated.06hjz7105oz3ez19a69y313xh3ah'>
+            <column caption='Age 14Level' datatype='string' name='[AGE_14LEVEL]' role='dimension' type='nominal' />
+            <column caption='Bmi 5Cat' datatype='string' name='[BMI_5CAT]' role='dimension' type='nominal' />
+            <column caption='Employment Situation' datatype='string' name='[EMPLOYMENT_SITUATION]' role='dimension' type='nominal' />
+            <column caption='Menthlth' datatype='integer' name='[MENTHLTH]' role='measure' type='quantitative' />
+            <column caption='Mental Health Moderate/Severe' datatype='integer' name='[Mental Health 30 Day (copy)_1607222124836827137]' role='measure' type='ordinal'>
+              <calculation class='tableau' formula='SUM(IF [MENTHLTH] &gt;=16 THEN 1 END)' />
+            </column>
+            <column caption='Race' datatype='string' name='[RACE]' role='dimension' type='nominal' />
+            <column datatype='string' name='[SEX]' role='dimension' type='nominal' />
+            <column-instance column='[AGE_14LEVEL]' derivation='None' name='[none:AGE_14LEVEL:nk]' pivot='key' type='nominal' />
+            <column-instance column='[BMI_5CAT]' derivation='None' name='[none:BMI_5CAT:nk]' pivot='key' type='nominal' />
+            <column-instance column='[EMPLOYMENT_SITUATION]' derivation='None' name='[none:EMPLOYMENT_SITUATION:nk]' pivot='key' type='nominal' />
+            <column-instance column='[MENTHLTH]' derivation='None' name='[none:MENTHLTH:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[RACE]' derivation='None' name='[none:RACE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[SEX]' derivation='None' name='[none:SEX:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Mental Health 30 Day (copy)_1607222124836827137]' derivation='User' name='[usr:Mental Health 30 Day (copy)_1607222124836827137:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Mental Health 30 Day (copy)_1607222124836827137]' derivation='User' name='[usr:Mental Health 30 Day (copy)_1607222124836827137:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:AGE_14LEVEL:nk]' kind='hide'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:AGE_14LEVEL:nk]' />
+              <groupfilter function='member' level='[none:AGE_14LEVEL:nk]' member='&quot;Dont know&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:AGE_14LEVEL:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;18-24&quot;</bucket>
+              <bucket>&quot;25-29&quot;</bucket>
+              <bucket>&quot;30-34&quot;</bucket>
+              <bucket>&quot;35-39&quot;</bucket>
+              <bucket>&quot;40-44&quot;</bucket>
+              <bucket>&quot;45-49&quot;</bucket>
+              <bucket>&quot;50-54&quot;</bucket>
+              <bucket>&quot;55-59&quot;</bucket>
+              <bucket>&quot;65-69&quot;</bucket>
+              <bucket>&quot;70-74&quot;</bucket>
+              <bucket>&quot;75-79&quot;</bucket>
+              <bucket>&quot;80-Older&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:BMI_5CAT:nk]'>
+            <groupfilter function='member' level='[none:BMI_5CAT:nk]' member='&quot;Obese&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:EMPLOYMENT_SITUATION:nk]'>
+            <groupfilter function='member' level='[none:EMPLOYMENT_SITUATION:nk]' member='&quot;Unable to Work&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:MENTHLTH:qk]' included-values='in-range'>
+            <min>1</min>
+            <max>30</max>
+          </filter>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:RACE:nk]'>
+            <groupfilter function='member' level='[none:RACE:nk]' member='&quot;White&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:SEX:nk]'>
+            <groupfilter function='level-members' level='[none:SEX:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[none:MENTHLTH:qk]</column>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[none:SEX:nk]</column>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[none:BMI_5CAT:nk]</column>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[none:EMPLOYMENT_SITUATION:nk]</column>
+            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[none:RACE:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Mental Health 30 Day (copy)_1607222124836827137:ok]' value='bold' />
+            <format attr='color' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Mental Health 30 Day (copy)_1607222124836827137:ok]' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:AGE_14LEVEL:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Mental Health 30 Day (copy)_1607222124836827137:qk]</rows>
+        <cols>([federated.06hjz7105oz3ez19a69y313xh3ah].[none:AGE_14LEVEL:nk] / [federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Mental Health 30 Day (copy)_1607222124836827137:ok])</cols>
+      </table>
+      <simple-id uuid='{D0287F9D-72A0-49F7-AC77-624DA5905D3B}' />
+    </worksheet>
     <worksheet name='Sheet 9'>
       <table>
         <view>
@@ -1964,89 +2076,6 @@
       </table>
       <simple-id uuid='{87253B71-43BF-445D-8A8C-0C918F024879}' />
     </worksheet>
-    <worksheet name='patient_age (2)'>
-      <layout-options>
-        <title>
-          <formatted-text>
-            <run bold='true'>Patients with &gt; 2 Weeks of Mental Health problems + BMI</run>
-            <run>Æ&#10;&#10;</run>
-          </formatted-text>
-        </title>
-      </layout-options>
-      <table>
-        <view>
-          <datasources>
-            <datasource caption='mltable (postgres)' name='federated.06hjz7105oz3ez19a69y313xh3ah' />
-          </datasources>
-          <datasource-dependencies datasource='federated.06hjz7105oz3ez19a69y313xh3ah'>
-            <column caption='Bmi 5Cat' datatype='string' name='[BMI_5CAT]' role='dimension' type='nominal' />
-            <column caption='Menthlth' datatype='integer' name='[MENTHLTH]' role='measure' type='quantitative' />
-            <_.fcp.ObjectModelTableType.false...column caption='cleaned_dashboard_data' datatype='integer' name='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' role='measure' type='quantitative' />
-            <column caption='Mental Health Moderate/Severe' datatype='integer' name='[Mental Health 30 Day (copy)_1607222124836827137]' role='measure' type='ordinal'>
-              <calculation class='tableau' formula='SUM(IF [MENTHLTH] &gt;=16 THEN 1 END)' />
-            </column>
-            <_.fcp.ObjectModelTableType.true...column caption='cleaned_dashboard_data' datatype='table' name='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' role='measure' type='quantitative' />
-            <column-instance column='[__tableau_internal_object_id__].[cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[BMI_5CAT]' derivation='None' name='[none:BMI_5CAT:nk]' pivot='key' type='nominal' />
-            <column-instance column='[MENTHLTH]' derivation='None' name='[none:MENTHLTH:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[Mental Health 30 Day (copy)_1607222124836827137]' derivation='User' name='[usr:Mental Health 30 Day (copy)_1607222124836827137:ok]' pivot='key' type='ordinal' />
-          </datasource-dependencies>
-          <filter class='categorical' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:BMI_5CAT:nk]' kind='hide'>
-            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-marker='enumerate'>
-              <groupfilter function='level-members' level='[none:BMI_5CAT:nk]' />
-              <groupfilter function='member' level='[none:BMI_5CAT:nk]' member='&quot;Underweight&quot;' />
-            </groupfilter>
-          </filter>
-          <filter class='quantitative' column='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:MENTHLTH:qk]' included-values='in-range'>
-            <min>1</min>
-            <max>30</max>
-          </filter>
-          <slices>
-            <column>[federated.06hjz7105oz3ez19a69y313xh3ah].[none:MENTHLTH:qk]</column>
-          </slices>
-          <aggregation value='true' />
-        </view>
-        <style>
-          <style-rule element='mark'>
-            <encoding attr='size-bar' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
-            <encoding attr='color' field='[federated.06hjz7105oz3ez19a69y313xh3ah].[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]' palette='red_gold_10_0' type='interpolated' />
-          </style-rule>
-          <style-rule element='worksheet'>
-            <format attr='display-field-labels' scope='rows' value='false' />
-            <format attr='display-field-labels' scope='cols' value='false' />
-          </style-rule>
-        </style>
-        <panes>
-          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Line' />
-            <encodings>
-              <color column='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Mental Health 30 Day (copy)_1607222124836827137:ok]' />
-              <lod column='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Mental Health 30 Day (copy)_1607222124836827137:ok]' />
-            </encodings>
-            <style>
-              <style-rule element='mark'>
-                <format attr='mark-labels-cull' value='true' />
-                <format attr='mark-labels-line-first' value='true' />
-                <format attr='mark-labels-line-last' value='true' />
-                <format attr='mark-labels-range-min' value='true' />
-                <format attr='mark-labels-range-max' value='true' />
-                <format attr='mark-labels-mode' value='all' />
-                <format attr='mark-labels-range-scope' value='pane' />
-                <format attr='mark-labels-range-field' value='' />
-                <format attr='mark-labels-show' value='true' />
-                <format attr='has-stroke' value='false' />
-              </style-rule>
-            </style>
-          </pane>
-        </panes>
-        <rows>[federated.06hjz7105oz3ez19a69y313xh3ah].[__tableau_internal_object_id__].[cnt:cleaned_dashboard_data_E38B2002B25E401384FF5F8C4D9BB905:qk]</rows>
-        <cols>[federated.06hjz7105oz3ez19a69y313xh3ah].[none:BMI_5CAT:nk]</cols>
-      </table>
-      <simple-id uuid='{2641BA79-C3D6-4073-B537-8FFF3A15A9AC}' />
-    </worksheet>
     <worksheet name='patient_by_state'>
       <table>
         <view>
@@ -2452,7 +2481,7 @@
         <zone h='15104' id='15' name='States w/ Most 30Day (3)' show-title='false' w='7247' x='439' y='84245' />
         <zone h='40625' id='18' is-centered='0' is-scaled='1' param='C:/Users/mille/Desktop/Bootcamp Materials/Healthcare_Analysis/Images/MENTvPHYS.png' type-v2='bitmap' w='53587' x='220' y='5599' />
         <zone h='99089' id='24' name='patient_age' w='45827' x='54319' y='391' />
-        <zone h='11589' id='27' name='patient_age' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:SEX:nk]' type-v2='filter' w='12299' x='88360' y='391' />
+        <zone h='11589' id='27' name='patient_age' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:SEX:nk]' show-all='false' type-v2='filter' w='12299' x='88360' y='391' />
         <zone forceUpdate='true' h='5469' id='36' type-v2='text' w='45168' x='3807' y='260'>
           <formatted-text>
             <run bold='true' fontcolor='#000000' fontsize='14'>Implied Mental Health Vs. Implied Physical Health Problems</run>
@@ -2466,11 +2495,14 @@
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
-          <size maxheight='1250' minheight='1250' sizing-mode='vscroll' />
+          <size maxheight='1400' minheight='1400' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='31' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='30' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
-                <zone fixed-size='280' h='45182' id='18' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/mille/Desktop/Bootcamp Materials/Healthcare_Analysis/Images/MENTvPHYS.png' type-v2='bitmap' w='53587' x='220' y='1042'>
+            <zone h='100000' id='41' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='40' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone forceUpdate='true' h='5469' id='36' type-v2='text' w='45168' x='3807' y='260'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#000000' fontsize='14'>Implied Mental Health Vs. Implied Physical Health Problems</run>
+                  </formatted-text>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -2479,7 +2511,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='11589' id='27' mode='checkdropdown' name='patient_age' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:SEX:nk]' type-v2='filter' w='12299' x='87335' y='651'>
+                <zone h='11589' id='27' mode='checkdropdown' name='patient_age' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:SEX:nk]' show-all='false' type-v2='filter' w='12299' x='88360' y='391'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -2488,7 +2520,16 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='99089' id='24' is-fixed='true' name='patient_age' w='45827' x='53953' y='1042'>
+                <zone fixed-size='280' h='99089' id='24' is-fixed='true' name='patient_age' w='45827' x='54319' y='391'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='97916' id='32' type-v2='text' w='43359' x='44342' y='1042'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -2497,7 +2538,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='53776' id='3' is-fixed='true' name='States w/ Most 30Day' show-title='false' w='53587' x='220' y='46224'>
+                <zone fixed-size='280' h='40625' id='18' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/mille/Desktop/Bootcamp Materials/Healthcare_Analysis/Images/MENTvPHYS.png' type-v2='bitmap' w='53587' x='220' y='5599'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -2506,7 +2547,28 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='148' h='19271' id='12' is-fixed='true' name='States w/ Most 30Day (2)' show-title='false' w='11420' x='42313' y='80339'>
+                <zone forceUpdate='true' h='5469' id='37' type-v2='text' w='53734' x='2343' y='45052'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#000000' fontsize='14'>State Total Patients &amp; Percentage with Moderate/Severe Mental Health</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='50000' id='3' is-fixed='true' name='States w/ Most 30Day' show-title='false' w='53587' x='220' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='136' h='17708' id='12' is-fixed='true' name='States w/ Most 30Day (2)' show-title='false' w='10176' x='43558' y='81901'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -2537,18 +2599,69 @@
       </devicelayouts>
       <simple-id uuid='{51125D22-75DB-4695-B03B-B1EB894885F1}' />
     </dashboard>
-    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Machine Learning'>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Interactive Pop DB'>
       <style />
       <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='mltable (postgres)' name='federated.06hjz7105oz3ez19a69y313xh3ah' />
+      </datasources>
+      <datasource-dependencies datasource='federated.06hjz7105oz3ez19a69y313xh3ah'>
+        <column caption='Bmi 5Cat' datatype='string' name='[BMI_5CAT]' role='dimension' type='nominal' />
+        <column caption='Employment Situation' datatype='string' name='[EMPLOYMENT_SITUATION]' role='dimension' type='nominal' />
+        <column caption='Race' datatype='string' name='[RACE]' role='dimension' type='nominal' />
+        <column datatype='string' name='[SEX]' role='dimension' type='nominal' />
+        <column-instance column='[BMI_5CAT]' derivation='None' name='[none:BMI_5CAT:nk]' pivot='key' type='nominal' />
+        <column-instance column='[EMPLOYMENT_SITUATION]' derivation='None' name='[none:EMPLOYMENT_SITUATION:nk]' pivot='key' type='nominal' />
+        <column-instance column='[RACE]' derivation='None' name='[none:RACE:nk]' pivot='key' type='nominal' />
+        <column-instance column='[SEX]' derivation='None' name='[none:SEX:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
       <zones>
         <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
-          <zone h='97916' id='9' is-centered='0' param='C:/Users/mille/Desktop/image (2).png' type-v2='bitmap' w='98828' x='586' y='1042'>
-            <zone-style>
-              <format attr='border-color' value='#000000' />
-              <format attr='border-style' value='none' />
-              <format attr='border-width' value='0' />
-              <format attr='margin' value='4' />
-            </zone-style>
+          <zone h='97916' id='7' param='horz' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='97916' id='5' type-v2='layout-basic' w='87115' x='586' y='1042'>
+              <zone h='97916' id='3' name='Full Interactive Patient Age' w='87115' x='586' y='1042'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='97916' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='11713' x='87701' y='1042'>
+              <zone h='11589' id='9' name='Full Interactive Patient Age' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:SEX:nk]' type-v2='filter' w='11713' x='87701' y='1042'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='26433' id='8' name='Full Interactive Patient Age' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:RACE:nk]' show-all='false' type-v2='filter' w='11713' x='87701' y='12631'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='14063' id='10' name='Full Interactive Patient Age' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:BMI_5CAT:nk]' show-all='false' type-v2='filter' w='11713' x='87701' y='39064'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='28907' id='11' name='Full Interactive Patient Age' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:EMPLOYMENT_SITUATION:nk]' type-v2='filter' w='11713' x='87701' y='53127'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
           </zone>
           <zone-style>
             <format attr='border-color' value='#000000' />
@@ -2557,48 +2670,150 @@
             <format attr='margin' value='8' />
           </zone-style>
         </zone>
-        <zone h='53906' id='6' is-centered='0' is-scaled='1' param='C:/Users/mille/Desktop/image (1).png' type-v2='bitmap' w='53148' x='53587' y='-391' />
-        <zone h='47005' id='5' is-centered='0' param='C:/Users/mille/Desktop/all_features.png' type-v2='bitmap' w='59590' x='-659' y='51042' />
-        <zone h='45833' id='8' is-centered='0' is-scaled='1' param='C:/Users/mille/Desktop/image.png' type-v2='bitmap' w='46047' x='60615' y='54036' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='15' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='14' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone h='11589' id='9' mode='checkdropdown' name='Full Interactive Patient Age' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:SEX:nk]' type-v2='filter' w='11713' x='87701' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='26433' id='8' mode='checkdropdown' name='Full Interactive Patient Age' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:RACE:nk]' show-all='false' type-v2='filter' w='11713' x='87701' y='12631'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='14063' id='10' mode='checkdropdown' name='Full Interactive Patient Age' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:BMI_5CAT:nk]' show-all='false' type-v2='filter' w='11713' x='87701' y='39064'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='28907' id='11' mode='checkdropdown' name='Full Interactive Patient Age' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:EMPLOYMENT_SITUATION:nk]' type-v2='filter' w='11713' x='87701' y='53127'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='97916' id='3' is-fixed='true' name='Full Interactive Patient Age' w='87115' x='586' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{0F80D6E6-9183-475C-88F0-4D500B3BFDF0}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Machine Learning'>
+      <style />
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='51693' id='6' is-centered='0' is-scaled='1' param='C:/Users/mille/Desktop/image (1).png' type-v2='bitmap' w='46413' x='53441' y='391'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+          </zone-style>
+        </zone>
+        <zone h='47396' id='5' is-centered='0' param='C:/Users/mille/Desktop/all_features.png' type-v2='bitmap' w='59663' x='732' y='52214'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+          </zone-style>
+        </zone>
+        <zone h='47786' id='8' is-centered='0' is-scaled='1' param='C:/Users/mille/Desktop/image.png' type-v2='bitmap' w='39458' x='60395' y='52083'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+          </zone-style>
+        </zone>
+        <zone h='52083' id='9' is-centered='0' is-scaled='1' param='C:/Users/mille/Desktop/image (2).png' type-v2='bitmap' w='52709' x='732' y='391'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+          </zone-style>
+        </zone>
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1200' minheight='1200' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='13' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='12' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
-                <zone fixed-size='280' h='53906' id='6' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/mille/Desktop/image (1).png' type-v2='bitmap' w='53148' x='53587' y='-391'>
+            <zone h='100000' id='17' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='16' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone fixed-size='280' h='52083' id='9' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/mille/Desktop/image (2).png' type-v2='bitmap' w='52709' x='732' y='391'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
-                    <format attr='border-style' value='none' />
-                    <format attr='border-width' value='0' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
                     <format attr='margin' value='4' />
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='97916' id='9' is-centered='0' is-fixed='true' param='C:/Users/mille/Desktop/image (2).png' type-v2='bitmap' w='98828' x='586' y='1042'>
+                <zone fixed-size='280' h='52214' id='6' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/mille/Desktop/image (1).png' type-v2='bitmap' w='46340' x='53514' y='391'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
-                    <format attr='border-style' value='none' />
-                    <format attr='border-width' value='0' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
                     <format attr='margin' value='4' />
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='47005' id='5' is-centered='0' is-fixed='true' param='C:/Users/mille/Desktop/all_features.png' type-v2='bitmap' w='59590' x='-659' y='51042'>
+                <zone fixed-size='280' h='47396' id='8' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/mille/Desktop/image.png' type-v2='bitmap' w='39239' x='60615' y='52474'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
-                    <format attr='border-style' value='none' />
-                    <format attr='border-width' value='0' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
                     <format attr='margin' value='4' />
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='45833' id='8' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/mille/Desktop/image.png' type-v2='bitmap' w='46047' x='60615' y='54036'>
+                <zone fixed-size='280' h='47005' id='5' is-centered='0' is-fixed='true' param='C:/Users/mille/Desktop/all_features.png' type-v2='bitmap' w='59663' x='732' y='52604'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
-                    <format attr='border-style' value='none' />
-                    <format attr='border-width' value='0' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
                     <format attr='margin' value='4' />
                     <format attr='padding' value='0' />
                   </zone-style>
@@ -2615,56 +2830,6 @@
         </devicelayout>
       </devicelayouts>
       <simple-id uuid='{1A6AB1A7-A912-419B-AF5B-04B2539230CF}' />
-    </dashboard>
-    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Patient Health Dashboard'>
-      <style />
-      <size maxheight='1024' maxwidth='1024' minheight='1024' minwidth='1024' sizing-mode='fixed' />
-      <zones>
-        <zone h='100000' id='16' type-v2='layout-basic' w='100000' x='0' y='0'>
-          <zone h='98438' id='19' param='horz' type-v2='layout-flow' w='98438' x='781' y='781'>
-            <zone h='98438' id='17' type-v2='layout-basic' w='98438' x='781' y='781' />
-          </zone>
-          <zone-style>
-            <format attr='border-color' value='#000000' />
-            <format attr='border-style' value='none' />
-            <format attr='border-width' value='0' />
-            <format attr='margin' value='8' />
-          </zone-style>
-        </zone>
-        <zone h='23926' id='15' name='States w/ Most 30Day' w='99707' x='-98' y='33887' />
-      </zones>
-      <devicelayouts>
-        <devicelayout active='true' name='Desktop'>
-          <zones>
-            <zone h='23926' id='15' name='States w/ Most 30Day' w='99707' x='-98' y='33887' />
-          </zones>
-        </devicelayout>
-        <devicelayout auto-generated='true' name='Phone'>
-          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
-          <zones>
-            <zone h='100000' id='25' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98438' id='24' param='vert' type-v2='layout-flow' w='98438' x='781' y='781'>
-                <zone fixed-size='245' h='23926' id='15' is-fixed='true' name='States w/ Most 30Day' w='99707' x='-98' y='33887'>
-                  <zone-style>
-                    <format attr='border-color' value='#000000' />
-                    <format attr='border-style' value='none' />
-                    <format attr='border-width' value='0' />
-                    <format attr='margin' value='4' />
-                    <format attr='padding' value='0' />
-                  </zone-style>
-                </zone>
-              </zone>
-              <zone-style>
-                <format attr='border-color' value='#000000' />
-                <format attr='border-style' value='none' />
-                <format attr='border-width' value='0' />
-                <format attr='margin' value='8' />
-              </zone-style>
-            </zone>
-          </zones>
-        </devicelayout>
-      </devicelayouts>
-      <simple-id uuid='{416091F7-CC87-4E33-A5B3-261D27EF8130}' />
     </dashboard>
     <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Patient Overview Dashboard'>
       <style />
@@ -2692,8 +2857,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1500' minheight='1500' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='40' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98438' id='39' param='vert' type-v2='layout-flow' w='98438' x='781' y='781'>
+            <zone h='100000' id='44' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98438' id='43' param='vert' type-v2='layout-flow' w='98438' x='781' y='781'>
                 <zone h='8203' id='6' mode='checkdropdown' name='patient_sex' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:SEX:nk]' type-v2='filter' w='10449' x='83301' y='781'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -2961,7 +3126,7 @@
       </cards>
       <simple-id uuid='{F3DDE84A-A7AD-467B-AE26-ABF8456E15F8}' />
     </window>
-    <window class='worksheet' name='patient_age (2)'>
+    <window class='worksheet' name='Full Interactive Patient Age'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -2983,11 +3148,17 @@
         </edge>
         <edge name='right'>
           <strip size='160'>
-            <card pane-specification-id='1' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[usr:Mental Health 30 Day (copy)_1607222124836827137:ok]' type='color' />
+            <card param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:RACE:nk]' show-all='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:AGE_14LEVEL:nk]' type='color' />
+          </strip>
+          <strip size='160'>
+            <card param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:SEX:nk]' type='filter' />
+            <card param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:BMI_5CAT:nk]' show-all='false' type='filter' />
+            <card param='[federated.06hjz7105oz3ez19a69y313xh3ah].[none:EMPLOYMENT_SITUATION:nk]' type='filter' />
           </strip>
         </edge>
       </cards>
-      <simple-id uuid='{B8DEADBF-EB05-4339-81F2-324DCAC31371}' />
+      <simple-id uuid='{C8C99204-0C95-4ABC-AC10-9063467A0CE6}' />
     </window>
     <window class='dashboard' name='Patient Overview Dashboard'>
       <viewpoints>
@@ -3003,16 +3174,7 @@
       <active id='-1' />
       <simple-id uuid='{F3431BD4-5153-46D3-A0A9-D6261BD84AFA}' />
     </window>
-    <window class='dashboard' name='Patient Health Dashboard'>
-      <viewpoints>
-        <viewpoint name='States w/ Most 30Day'>
-          <zoom type='entire-view' />
-        </viewpoint>
-      </viewpoints>
-      <active id='-1' />
-      <simple-id uuid='{C5429E39-62FC-4B94-9350-E0F86A245580}' />
-    </window>
-    <window class='dashboard' maximized='true' name='Analysis DB'>
+    <window class='dashboard' maximized='true' name='Analysis DB' tab-color='#4f779a'>
       <viewpoints>
         <viewpoint name='States w/ Most 30Day'>
           <zoom type='entire-view' />
@@ -3040,6 +3202,15 @@
       <viewpoints />
       <active id='-1' />
       <simple-id uuid='{A89F74A6-C0FE-48EE-9840-8D9F7D67B436}' />
+    </window>
+    <window class='dashboard' name='Interactive Pop DB'>
+      <viewpoints>
+        <viewpoint name='Full Interactive Patient Age'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{55307B6E-2F86-4605-832E-9DB5300F26AA}' />
     </window>
     <window class='worksheet' name='States w/ Most 30Day (2)'>
       <cards>
