@@ -1,5 +1,5 @@
 config.py
-*/.DS_Store
+.DS_Store
 Database/README-Adri.md
 data
 Machine_Learning/Drafts_and_Exploration
