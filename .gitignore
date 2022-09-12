@@ -1,1 +1,9 @@
 config.py
+.DS_Store
+README-Adri.md
+data/
+2015_clean.csv
+Columns_and_Data Cleaning.csv
+cleaned_health_df.csv
+Cleaned_Connection_Test.ipynb
+Drafts_and_Exploration/
