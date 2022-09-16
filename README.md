@@ -26,10 +26,11 @@
 ![image](https://user-images.githubusercontent.com/102445183/189580523-8b88d930-e244-4941-b548-054bbaac7ada.png)
 
 ## Analysis
-- Dashboard: https://drive.google.com/file/d/1b1Ht-8DS1jnd9z44IwShEgx3ozyJlPp2/view?resourcekey
-- Tools: Analysis was performed using Seaborn to create detailed and informative graphics using cleaned data from AWS RDS connection using Psycopg2 dependency.
+- Dashboards: https://public.tableau.com/app/profile/aaron.miller8492/viz/dashboard_16633725287210/AnalysisDB?publish=yes
+              https://public.tableau.com/app/profile/aaron.miller8492/viz/dashboard_16633725287210/InteractivePopDB?publish=yes
+- Tools: Analysis was performed using Seaborn to create detailed and informative graphics using cleaned data from AWS RDS connection using Psycopg2 dependency, as wekk as Tableau for dashboards and interactivity.
 - Data cleaning: Cleaned out certain code values indicating no response to questions; these no response answers were affecting the distribution of the data.
-- Visualizations: Performed visual analysis comparing certain features to others to determine relationships.
+- Visualizations: Visualizations show that individuals with poor physical health are more likely to experience moderate to severe mental health issues, and those with diseases such as Asthma and Coronary disease are 3-5x more likely to experience mental health problems. This is probably due to the fact that these diseases can limit an individuals physical activity.
 ![image](https://user-images.githubusercontent.com/102445183/189580384-c6488861-1077-4457-9e22-bed8ccc1d13d.png)
 
 ## Machine Learning
