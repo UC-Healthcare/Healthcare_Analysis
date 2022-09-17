@@ -29,7 +29,16 @@ Database is connected to pandas.
 
 
 
+## Deliverable 3
+###On Branch 
 
+Updated requirement Texts 
+Added Git ignore, organized repo
+
+## Deliverable 4 
+
+Checked work against rubric 
+Updated Slides 
 
 
 
